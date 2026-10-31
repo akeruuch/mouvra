@@ -1,0 +1,92 @@
+{
+  "verifiedAt": "2026-10-31",
+  "policy": "Only official manufacturer product pages, support pages, media and specifications. Prices are observed official store prices in original currency, not local offers. Null means not verified from official material. Manufacturer battery claims are not directly comparable unless conditions match.",
+  "products": [
+    {
+      "id": "superlight-2", "brand": "Logitech G", "name": "PRO X SUPERLIGHT 2", "variant": "White", "color": "Белый",
+      "weightG": 60, "weightNote": "Официальная масса без учёта кабеля.",
+      "sensor": "HERO 2", "dpiMax": 44000, "dpiMin": 100, "speedIps": 888, "accelerationG": 88,
+      "pollingHzIncluded": 8000, "pollingHzMax": 8000, "pollingNote": "До 8000 Гц через комплектный LIGHTSPEED. Расширенные настройки требуют G HUB и актуальной прошивки. Старые характеристики 32 000 DPI в одной секции сайта расходятся с обновлённой страницей и поддержкой; использованы актуальные 44 000 DPI.",
+      "dimensionsMm": { "length": 125, "width": 63.5, "height": 40 },
+      "batteryHours": 95, "batteryNote": "До 95 часов при непрерывном движении; частота опроса для этого значения на странице не указана. Зависит от использования и условий.",
+      "shape": "Симметричный корпус, боковые кнопки слева", "shapeSource": "Официальные изображения", "recommendedGrip": null,
+      "switches": "LIGHTFORCE, гибридные оптико-механические", "connectivity": ["LIGHTSPEED 2,4 ГГц", "USB-C"],
+      "price": { "amount": 159.99, "currency": "USD", "listAmount": 159.99, "region": "US", "observedAt": "2026-10-31", "availability": "in_stock", "note": "Цена белой версии в официальном магазине США; доставка и налоги зависят от региона.", "url": "https://www.logitechg.com/en-us/shop/p/pro-x2-superlight-wireless-mouse" },
+      "image": "/images/superlight-white-top.png",
+      "gallery": ["/images/superlight-white-top.png", "/images/superlight-white-right.png", "/images/superlight-white-bottom.png"],
+      "model3d": { "path": "/images/superlight-white.glb", "official": true, "url": "https://resource.logitechg.com/content/dam/gaming/en/ar-models/pro-x-superlight-2/pro-x-superlight-2-off-white-gaming-mice-ar-360.glb", "sourcePage": "https://www.logitechg.com/en-us/shop/p/pro-x2-superlight-wireless-mouse" },
+      "sources": ["https://www.logitechg.com/en-us/shop/p/pro-x2-superlight-wireless-mouse", "https://support.logi.com/hc/de-at/articles/15235304069783-Specification-G-PRO-X-Superlight-2-Lightspeed-Gaming-Mouse"]
+    },
+    {
+      "id": "viper-v3-pro", "brand": "Razer", "name": "Viper V3 Pro", "variant": "White", "color": "Белый",
+      "weightG": 55, "weightNote": "55 г для белой версии; чёрная — 54 г. Без кабеля и приёмника.",
+      "sensor": "Focus Pro 35K Optical Sensor Gen-2", "dpiMax": 35000, "dpiMin": null, "speedIps": 750, "accelerationG": 70,
+      "pollingHzIncluded": 8000, "pollingHzMax": 8000, "pollingNote": "До 8000 Гц по беспроводному соединению с комплектным HyperPolling Wireless Dongle. 8000 Гц по кабелю не поддерживаются. Это обычная Pro, не Pro SE.",
+      "dimensionsMm": { "length": 127.1, "width": 63.9, "height": 39.9 },
+      "batteryHours": 95, "batteryNote": "До 95 ч при 1000 Гц; 62 ч при 2000 Гц; 40 ч при 4000 Гц; 17 ч при 8000 Гц.",
+      "shape": "Симметричная, для правой руки", "recommendedGrip": null,
+      "switches": "Razer Optical Mouse Switches Gen-3", "connectivity": ["HyperSpeed 2,4 ГГц", "USB-C"],
+      "price": { "amount": 129.99, "currency": "USD", "listAmount": 159.99, "region": "US", "observedAt": "2026-10-31", "availability": "in_stock", "note": "Официальная акционная цена белой версии США из состояния страницы производителя.", "url": "https://www.razer.com/gaming-mice/razer-viper-v3-pro" },
+      "image": "/images/viper-white.png", "gallery": ["/images/viper-white.png"], "model3d": null,
+      "model3dNote": "Отдельная официальная GLB-модель на проверенной странице не обнаружена. Не заменять геометрией другой модели.",
+      "sources": ["https://www.razer.com/gaming-mice/razer-viper-v3-pro", "https://mysupport.razer.com/app/answers/detail/a_id/14045/", "https://mysupport.razer.com/app/answers/detail/a_id/14044/", "https://www.razer.com/blog/razer-viper-line-which-one-is-right-for-you"]
+    },
+    {
+      "id": "deathadder-v3-pro", "brand": "Razer", "name": "DeathAdder V3 Pro", "variant": "White / Classic Base / 1000 Hz", "color": "Белый",
+      "weightG": 64, "weightNote": "64 г для белой версии; чёрная — 63 г. Без кабеля.",
+      "sensor": "Focus Pro 30K Optical Sensor", "dpiMax": 30000, "dpiMin": null, "speedIps": 750, "accelerationG": 70,
+      "pollingHzIncluded": 1000, "pollingHzMax": 8000, "pollingNote": "В комплекте Classic Base — приёмник 1000 Гц. До 8000 Гц по беспроводному соединению с отдельно приобретаемым HyperPolling Wireless Dongle. 8000 Гц по кабелю не поддерживаются. Не смешивать с комплектацией Smooth Touch 8000 Hz.",
+      "dimensionsMm": { "length": 128, "width": 68, "height": 44 },
+      "batteryHours": 90, "batteryNote": "До 90 ч при 1000 Гц; до 17 ч при 8000 Гц. Руководство уточняет непрерывное движение при 1000 Гц.",
+      "shape": "Эргономичная, для правой руки", "recommendedGrip": null,
+      "switches": "Razer Optical Mouse Switches Gen-3", "connectivity": ["HyperSpeed 2,4 ГГц", "USB-C"],
+      "price": { "amount": 79.99, "currency": "USD", "listAmount": 149.99, "region": "US", "observedAt": "2026-10-31", "availability": "out_of_stock", "note": "Последняя показанная цена белой Classic Base 1000 Hz; в официальном магазине США нет в наличии.", "url": "https://www.razer.com/gaming-mice/razer-deathadder-v3-pro" },
+      "image": "/images/deathadder-white.png", "gallery": ["/images/deathadder-white.png"],
+      "model3d": { "path": "/images/deathadder-white.glb", "official": true, "url": "https://assets2.razerzone.com/images/pnx.assets/ff523d4d63e2c502a54445ef267144c8/da-v3-pro-white-240731.glb", "sourcePage": "https://www.razer.com/gaming-mice/razer-deathadder-v3-pro" },
+      "sources": ["https://www.razer.com/gaming-mice/razer-deathadder-v3-pro", "https://mysupport.razer.com/app/answers/detail/a_id/6125", "https://dl.razerzone.com/master-guides/RazerSynapse3/DEATHADDERV3PRO-00000182-en.pdf"]
+    },
+    {
+      "id": "zowie-u2", "brand": "ZOWIE", "name": "U2", "variant": "Original U2 / Black / 1000 Hz", "color": "Чёрный",
+      "weightG": 60.3, "weightNote": "60,3 г в таблице характеристик. FAQ и схема округляют до 60 г.",
+      "sensor": "PixArt 3395", "dpiMax": 3200, "dpiMin": 400, "speedIps": null, "accelerationG": null,
+      "pollingHzIncluded": 1000, "pollingHzMax": 1000, "pollingNote": "125 / 500 / 1000 Гц. Речь об оригинальной U2, не U2-DW 4K. Доступные DPI: 400 / 800 / 1000 / 1200 / 1600 / 3200.",
+      "dimensionsMm": { "length": 124, "width": 65, "height": 38 },
+      "dimensionsNote": "По официальной схеме: максимальная ширина 65 мм, в зоне хвата 58 мм, спереди 60 мм.",
+      "batteryHours": 70, "batteryNote": "До 70 часов непрерывного движения; частота для этого значения на странице не указана.",
+      "shape": "Симметричная, для правой руки", "recommendedGrip": ["Claw"],
+      "switches": null, "switchesNote": "Модель основных переключателей на проверенной официальной странице не указана; не путать с оптическим энкодером колеса.", "connectivity": ["2,4 ГГц", "USB-C"],
+      "price": { "amount": null, "currency": null, "listAmount": null, "region": "SG", "observedAt": "2026-10-31", "availability": "discontinued", "note": "Цена оригинальной U2 не показана. Официальная страница помечает модель снятой с продажи; американская ссылка перенаправляет на другую модель U2-DW.", "url": "https://zowie.benq.com/en-sg/mouse/u2.html" },
+      "image": "/images/zowie-u2.png", "gallery": ["/images/zowie-u2.png"],
+      "model3d": { "path": "/images/zowie-u2.glb", "official": true, "url": "https://zowie.benq.com/content/dam/zowie/en/product/mouse/glb-file/black/u2-black.glb", "sourcePage": "https://zowie.benq.com/en-sg/mouse/u2.html" },
+      "sources": ["https://zowie.benq.com/en-sg/mouse/u2.html", "https://image.benq.com/is/image/benqco/07-u2-measurement?fmt=png-alpha"]
+    },
+    {
+      "id": "pulsar-x2v2", "brand": "Pulsar", "name": "X2 v2 Medium", "variant": "White / Medium", "color": "Белый",
+      "weightG": 53, "weightNote": "53 ± 1 г. Не путать с Mini.",
+      "sensor": "PixArt PAW3395", "dpiMax": 26000, "dpiMin": null, "speedIps": 650, "accelerationG": 50,
+      "pollingHzIncluded": 1000, "pollingHzMax": 4000, "pollingNote": "Комплектный приёмник — 1000 Гц. 4000 Гц требуют отдельного Pulsar 4K Wireless Dongle.",
+      "dimensionsMm": { "length": 120.4, "width": 63, "height": 38 },
+      "batteryHours": 100, "batteryNote": "До 100 часов ±10% при 1000 Гц. Фактическое время зависит от условий использования.",
+      "shape": "Симметричная, широкая середина и низкая спинка", "recommendedGrip": ["Claw", "Fingertip"],
+      "switches": "Оптические переключатели Pulsar", "connectivity": ["2,4 ГГц", "USB-C"],
+      "price": { "amount": 99.95, "currency": "USD", "listAmount": 99.95, "region": "Global", "observedAt": "2026-10-31", "availability": "out_of_stock", "note": "Белая версия недоступна; чёрная доступна по той же цене. Налоги, НДС и импортные пошлины не включены.", "url": "https://www.pulsar.gg/products/x2v2-gaming-mouse" },
+      "image": "/images/pulsar-x2v2-white.png", "gallery": ["/images/pulsar-x2v2-white.png"], "model3d": null,
+      "model3dNote": "Официальная 3D-модель на проверенной странице не обнаружена.",
+      "sources": ["https://www.pulsar.gg/products/x2v2-gaming-mouse"]
+    },
+    {
+      "id": "atlantis-og-v2-pro", "brand": "LAMZU", "name": "Atlantis OG V2 Pro", "variant": "Polar White / 4K Compatible", "color": "Polar White",
+      "weightG": 57, "weightNote": "57 ± 2 г по официальному PDF. Не использовать часто встречающееся стороннее значение 55 г как номинальную массу.",
+      "sensor": "PixArt 3395", "dpiMax": 26000, "dpiMin": null, "speedIps": null, "accelerationG": null,
+      "pollingHzIncluded": 1000, "pollingHzMax": 4000, "pollingNote": "Pro поставляется с приёмником 1000 Гц. Для 4000 Гц нужен отдельный совместимый 4K Dongle. Не путать с версией OG V2 4K с комплектным 4K-приёмником.",
+      "dimensionsMm": { "length": 123, "width": 66, "height": 38 },
+      "batteryHours": null, "batteryNote": "В проверенном официальном PDF и на странице товара продолжительность работы не указана.",
+      "shape": "Симметричный корпус, боковые кнопки слева", "shapeSource": "Официальная схема в PDF", "recommendedGrip": null,
+      "switches": "Huano Transparent Blue Shell Pink Dot", "connectivity": ["Беспроводное", "USB-C"],
+      "price": { "amount": 91.99, "currency": "USD", "listAmount": 91.99, "region": "Global", "observedAt": "2026-10-31", "availability": "out_of_stock", "note": "Все показанные варианты распроданы. НДС, налоги и импортные пошлины не включены.", "url": "https://lamzu.com/products/lamzu-atlantis-og-v2-pro-gaming-mouse" },
+      "image": "/images/lamzu-white.png", "gallery": ["/images/lamzu-white.png"], "model3d": null,
+      "model3dNote": "Официальная 3D-модель на странице товара и в разделе ресурсов не обнаружена. Производитель публикует изображения и PDF.",
+      "sources": ["https://lamzu.com/products/lamzu-atlantis-og-v2-pro-gaming-mouse", "https://lamzu.com/pages/resource", "https://cdn.shopify.com/s/files/1/0581/9675/4466/files/resource_OG_V2_PRO_specifications.pdf?v=1713866630", "https://lamzu.com/pages/q-a"]
+    }
+  ]
+}

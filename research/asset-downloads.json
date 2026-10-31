@@ -1,0 +1,62 @@
+[
+  {
+    "name": "superlight-white-top.png",
+    "url": "https://resource.logitechg.com/content/dam/gaming/en/products/pro-x-superlight-2/new-gallery-assets-2025/pro-x-superlight-2-mice-top-angle-white-gallery-1.png",
+    "bytes": 1084719,
+    "status": "downloaded"
+  },
+  {
+    "name": "superlight-white-right.png",
+    "url": "https://resource.logitechg.com/content/dam/gaming/en/products/pro-x-superlight-2/new-gallery-assets-2025/pro-x-superlight-2-mice-profile-right-angle-white-gallery-5.png",
+    "bytes": 733275,
+    "status": "downloaded"
+  },
+  {
+    "name": "superlight-white-bottom.png",
+    "url": "https://resource.logitechg.com/content/dam/gaming/en/products/pro-x-superlight-2/new-gallery-assets-2025/pro-x-superlight-2-mouse-bottom-angle-white-gallery-6.png",
+    "bytes": 1564315,
+    "status": "downloaded"
+  },
+  {
+    "name": "superlight-white.glb",
+    "url": "https://resource.logitechg.com/content/dam/gaming/en/ar-models/pro-x-superlight-2/pro-x-superlight-2-off-white-gaming-mice-ar-360.glb",
+    "bytes": 9233256,
+    "status": "downloaded"
+  },
+  {
+    "name": "deathadder-white.glb",
+    "url": "https://assets2.razerzone.com/images/pnx.assets/ff523d4d63e2c502a54445ef267144c8/da-v3-pro-white-240731.glb",
+    "bytes": 14447888,
+    "status": "downloaded"
+  },
+  {
+    "name": "zowie-u2.glb",
+    "url": "https://zowie.benq.com/content/dam/zowie/en/product/mouse/glb-file/black/u2-black.glb",
+    "bytes": 10027248,
+    "status": "downloaded"
+  },
+  {
+    "name": "viper-white.png",
+    "url": "https://medias-p1.phoenix.razer.com/sys-master-phoenix-images-container/h4e/h5e/9765618221086/viper-v3-pro-white-500x500.png",
+    "bytes": 71536,
+    "status": "downloaded"
+  },
+  {
+    "name": "deathadder-white.png",
+    "url": "https://medias-p1.phoenix.razer.com/sys-master-phoenix-images-container/h67/hc4/10045164552222/deathadder-v3-pro-white-v2-500x500.png",
+    "bytes": 73902,
+    "status": "downloaded"
+  },
+  {
+    "name": "zowie-u2.png",
+    "url": "https://image.benq.com/is/image/benqco/01-u2-top?$ResponsivePreset$=&fmt=png-alpha",
+    "bytes": 124877,
+    "status": "downloaded"
+  },
+  {
+    "name": "lamzu-white.png",
+    "url": "https://lamzu.com/cdn/shop/files/productColor_V2_pro_white.png?v=1714121473",
+    "bytes": 375226,
+    "status": "downloaded"
+  }
+]

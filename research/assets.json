@@ -1,0 +1,123 @@
+[
+  {
+    "name": "superlight-white-top.png",
+    "url": "https://resource.logitechg.com/content/dam/gaming/en/products/pro-x-superlight-2/new-gallery-assets-2025/pro-x-superlight-2-mice-top-angle-white-gallery-1.png",
+    "path": "/images/superlight-white-top.png",
+    "verifiedAt": "2026-10-31",
+    "bytes": 1084719,
+    "sha256": "5159ad585181d312b302d58f7c2c3651ab802b392eafe9889ae31ac8a552ef4f",
+    "width": 2500,
+    "height": 2160,
+    "colorType": 6
+  },
+  {
+    "name": "superlight-white-right.png",
+    "url": "https://resource.logitechg.com/content/dam/gaming/en/products/pro-x-superlight-2/new-gallery-assets-2025/pro-x-superlight-2-mice-profile-right-angle-white-gallery-5.png",
+    "path": "/images/superlight-white-right.png",
+    "verifiedAt": "2026-10-31",
+    "bytes": 733275,
+    "sha256": "00d4e09e2477b2143e424d29ba2baacad6b327a49a988312026df1fe76b51394",
+    "width": 2500,
+    "height": 2160,
+    "colorType": 6
+  },
+  {
+    "name": "superlight-white-bottom.png",
+    "url": "https://resource.logitechg.com/content/dam/gaming/en/products/pro-x-superlight-2/new-gallery-assets-2025/pro-x-superlight-2-mouse-bottom-angle-white-gallery-6.png",
+    "path": "/images/superlight-white-bottom.png",
+    "verifiedAt": "2026-10-31",
+    "bytes": 1564315,
+    "sha256": "05956c01c321c6d948c4d053d1c1c07d16bb60f8bab762a1d58434d262389768",
+    "width": 2500,
+    "height": 2160,
+    "colorType": 6
+  },
+  {
+    "name": "superlight-white.glb",
+    "url": "https://resource.logitechg.com/content/dam/gaming/en/ar-models/pro-x-superlight-2/pro-x-superlight-2-off-white-gaming-mice-ar-360.glb",
+    "path": "/images/superlight-white.glb",
+    "verifiedAt": "2026-10-31",
+    "bytes": 9233256,
+    "sha256": "ce7f19702694eaf41f2b4c5e9793eb9cd13c17e6b451d6d508a4038a94bc5888",
+    "gltfVersion": 2,
+    "meshCount": 2,
+    "externalUris": []
+  },
+  {
+    "name": "deathadder-white.glb",
+    "url": "https://assets2.razerzone.com/images/pnx.assets/ff523d4d63e2c502a54445ef267144c8/da-v3-pro-white-240731.glb",
+    "path": "/images/deathadder-white.glb",
+    "verifiedAt": "2026-10-31",
+    "bytes": 14447888,
+    "sha256": "e552fbdd0cddd30ea18098c5fad0f0af0909ade0fd411ea1ad03c8e27e59e737",
+    "gltfVersion": 2,
+    "meshCount": 35,
+    "externalUris": []
+  },
+  {
+    "name": "zowie-u2.glb",
+    "url": "https://zowie.benq.com/content/dam/zowie/en/product/mouse/glb-file/black/u2-black.glb",
+    "path": "/images/zowie-u2.glb",
+    "verifiedAt": "2026-10-31",
+    "bytes": 10027248,
+    "sha256": "4bd07b038467a4dcd742fff5b66d935c33c68ce13f0a502754cf959f2d0eb941",
+    "gltfVersion": 2,
+    "meshCount": 29,
+    "externalUris": []
+  },
+  {
+    "name": "viper-white.png",
+    "url": "https://medias-p1.phoenix.razer.com/sys-master-phoenix-images-container/h4e/h5e/9765618221086/viper-v3-pro-white-500x500.png",
+    "path": "/images/viper-white.png",
+    "verifiedAt": "2026-10-31",
+    "bytes": 71536,
+    "sha256": "687f495c11c3303577493d379d3d0a10a645fc9e4a5fb8625d3e13cbd3c5c917",
+    "width": 500,
+    "height": 500,
+    "colorType": 6
+  },
+  {
+    "name": "deathadder-white.png",
+    "url": "https://medias-p1.phoenix.razer.com/sys-master-phoenix-images-container/h67/hc4/10045164552222/deathadder-v3-pro-white-v2-500x500.png",
+    "path": "/images/deathadder-white.png",
+    "verifiedAt": "2026-10-31",
+    "bytes": 73902,
+    "sha256": "3dea731ed100a3c2366e6db9cef2f2caf7d6bab5388f4a54f72df2d18f809bd4",
+    "width": 500,
+    "height": 500,
+    "colorType": 6
+  },
+  {
+    "name": "zowie-u2.png",
+    "url": "https://image.benq.com/is/image/benqco/01-u2-top?$ResponsivePreset$=&fmt=png-alpha",
+    "path": "/images/zowie-u2.png",
+    "verifiedAt": "2026-10-31",
+    "bytes": 124877,
+    "sha256": "f7ba5165071af21cd2dcf628b29ea550423ebf748cf98cc1a1e4e789946df3b0",
+    "width": 1000,
+    "height": 1000,
+    "colorType": 6
+  },
+  {
+    "name": "lamzu-white.png",
+    "url": "https://lamzu.com/cdn/shop/files/productColor_V2_pro_white.png?v=1714121473",
+    "path": "/images/lamzu-white.png",
+    "verifiedAt": "2026-10-31",
+    "bytes": 375226,
+    "sha256": "4bf137c34c2947a3dae98f4f11f2410d929d50307c7f77b6427ef48c426aa35a",
+    "width": 1600,
+    "height": 1600,
+    "colorType": 3
+  },
+  {
+    "name": "pulsar-x2v2-white.png",
+    "url": "https://www.pulsar.gg/cdn/shop/products/X2V2gamingmouse_medium_White_Top_b60ca055-6bc8-440a-84bb-65f8779774dc-109345.png?v=1758619152",
+    "path": "/images/pulsar-x2v2-white.png",
+    "verifiedAt": "2026-10-31",
+    "bytes": 65397,
+    "sha256": "8e9f1b1d9a890855cdbe31b402f59a22c9253cec8cb311e736b5f9d117a5abdd",
+    "width": 1024,
+    "height": 1024,
+    "colorType": 3
+  }
+]
