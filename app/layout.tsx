@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import "./mouvra.css";
+import "./responsive.css";
+import "./experience.css";
 import { StoreProvider } from '@/components/store';
+import Storefront from '@/components/Storefront';
 
 export const metadata: Metadata = {
   title: "MOUVRA — искусство точности",
@@ -18,7 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ru">
-      <body><StoreProvider>{children}</StoreProvider></body>
+      <body><StoreProvider><Storefront/>{children}</StoreProvider></body>
     </html>
   );
 }

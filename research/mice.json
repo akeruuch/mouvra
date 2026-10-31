@@ -87,6 +87,1287 @@
       "image": "/images/lamzu-white.png", "gallery": ["/images/lamzu-white.png"], "model3d": null,
       "model3dNote": "Официальная 3D-модель на странице товара и в разделе ресурсов не обнаружена. Производитель публикует изображения и PDF.",
       "sources": ["https://lamzu.com/products/lamzu-atlantis-og-v2-pro-gaming-mouse", "https://lamzu.com/pages/resource", "https://cdn.shopify.com/s/files/1/0581/9675/4466/files/resource_OG_V2_PRO_specifications.pdf?v=1713866630", "https://lamzu.com/pages/q-a"]
+    },
+    {
+      "weightG": 49,
+      "weightNote": "Номинальное значение производителя; фактическая масса может отличаться.",
+      "sensor": "PixArt PAW3395",
+      "dpiMax": 26000,
+      "dpiMin": null,
+      "speedIps": 650,
+      "accelerationG": 50,
+      "pollingHzIncluded": 1000,
+      "pollingHzMax": 1000,
+      "pollingNote": "В проверенных официальных материалах не подтверждено.",
+      "dimensionsMm": {
+        "length": 118.5,
+        "width": 61,
+        "height": 39.7
+      },
+      "batteryHours": 200,
+      "batteryNote": "До 200 часов при использовании с перерывами; частота опроса и непрерывное время не указаны.",
+      "shape": "Симметричная, боковые кнопки слева",
+      "shapeSource": "Классификация по официальным изображениям; не рекомендация хвата.",
+      "recommendedGrip": null,
+      "switches": "Kailh GM 8.0 / Black Mamba",
+      "connectivity": [
+        "2,4 ГГц",
+        "Bluetooth",
+        "USB-C"
+      ],
+      "id": "attack-shark-x3",
+      "brand": "Attack Shark",
+      "name": "X3",
+      "variant": "White / Default",
+      "color": "Белый",
+      "switchesNote": "Текст называет GM 8.0, сравнительная таблица — Black Mamba (80 млн). Сохранены оба обозначения.",
+      "price": {
+        "amount": null,
+        "currency": null,
+        "listAmount": null,
+        "region": "Global",
+        "observedAt": "2026-10-31",
+        "availability": "unknown",
+        "note": "Цена и доступность конкретного регионального предложения не подтверждены.",
+        "url": "https://attackshark.com/products/attack-shark-x3-wireless-gaming-mouse-paw3395"
+      },
+      "image": "/images/attack-shark-x3.jpg",
+      "gallery": [
+        "/images/attack-shark-x3.jpg"
+      ],
+      "model3d": null,
+      "model3dNote": "Официальный GLB/GLTF-ассет для этой модели не найден в проверенных материалах.",
+      "sources": [
+        "https://attackshark.com/products/attack-shark-x3-wireless-gaming-mouse-paw3395"
+      ],
+      "imageSource": "https://cdn.shopify.com/s/files/1/0823/5050/6282/files/attackshark_x3_gaming_mouse_0055.jpg?v=1750248723"
+    },
+    {
+      "weightG": 49,
+      "weightNote": "Номинальное значение производителя; фактическая масса может отличаться.",
+      "sensor": "PixArt PAW3395",
+      "dpiMax": 26000,
+      "dpiMin": null,
+      "speedIps": null,
+      "accelerationG": null,
+      "pollingHzIncluded": null,
+      "pollingHzMax": null,
+      "pollingNote": "Частота опроса не подтверждена в проверенном тексте; не переносится с X3.",
+      "dimensionsMm": {
+        "length": null,
+        "width": null,
+        "height": null
+      },
+      "batteryHours": 200,
+      "batteryNote": "До 200 часов при использовании с перерывами; частота опроса не указана.",
+      "shape": "Симметричная, боковые кнопки слева",
+      "shapeSource": "Классификация по официальным изображениям; не рекомендация хвата.",
+      "recommendedGrip": null,
+      "switches": "Kailh GM 8.0",
+      "connectivity": [
+        "2,4 ГГц",
+        "Bluetooth",
+        "USB-C"
+      ],
+      "id": "attack-shark-x6",
+      "brand": "Attack Shark",
+      "name": "X6",
+      "variant": "White / Default",
+      "color": "Белый",
+      "price": {
+        "amount": null,
+        "currency": null,
+        "listAmount": null,
+        "region": "Global",
+        "observedAt": "2026-10-31",
+        "availability": "unknown",
+        "note": "Цена и доступность конкретного регионального предложения не подтверждены.",
+        "url": "https://attackshark.com/products/x6-49g-wireless-gaming-mouse-charging-dock"
+      },
+      "image": "/images/attack-shark-x6.png",
+      "gallery": [
+        "/images/attack-shark-x6.png"
+      ],
+      "model3d": null,
+      "model3dNote": "Официальный GLB/GLTF-ассет для этой модели не найден в проверенных материалах.",
+      "sources": [
+        "https://attackshark.com/products/x6-49g-wireless-gaming-mouse-charging-dock"
+      ],
+      "imageSource": "https://cdn.shopify.com/s/files/1/0823/5050/6282/files/X6_3.png?v=1778225668"
+    },
+    {
+      "weightG": 59,
+      "weightNote": "Номинальное значение производителя; фактическая масса может отличаться.",
+      "sensor": "PixArt PAW3311",
+      "dpiMax": 18000,
+      "dpiMin": null,
+      "speedIps": null,
+      "accelerationG": null,
+      "pollingHzIncluded": null,
+      "pollingHzMax": null,
+      "pollingNote": "В проверенных официальных материалах не подтверждено.",
+      "dimensionsMm": {
+        "length": null,
+        "width": null,
+        "height": null
+      },
+      "batteryHours": 65,
+      "batteryNote": "Заявление производителя; частота опроса и условия тестирования не указаны.",
+      "shape": "Эргономичная, для правой руки",
+      "shapeSource": "Классификация по официальным изображениям; не рекомендация хвата.",
+      "recommendedGrip": null,
+      "switches": null,
+      "connectivity": [
+        "2,4 ГГц",
+        "Bluetooth",
+        "USB-C"
+      ],
+      "id": "attack-shark-r1",
+      "brand": "Attack Shark",
+      "name": "R1",
+      "variant": "White / Default",
+      "color": "Белый",
+      "price": {
+        "amount": null,
+        "currency": null,
+        "listAmount": null,
+        "region": "Global",
+        "observedAt": "2026-10-31",
+        "availability": "unknown",
+        "note": "Цена и доступность конкретного регионального предложения не подтверждены.",
+        "url": "https://attackshark.com/products/attack-shark-r1-mouse"
+      },
+      "image": "/images/attack-shark-r1.png",
+      "gallery": [
+        "/images/attack-shark-r1.png"
+      ],
+      "model3d": null,
+      "model3dNote": "Официальный GLB/GLTF-ассет для этой модели не найден в проверенных материалах.",
+      "sources": [
+        "https://attackshark.com/products/attack-shark-r1-mouse"
+      ],
+      "imageSource": "https://cdn.shopify.com/s/files/1/0823/5050/6282/files/R1_3.png?v=1777360309"
+    },
+    {
+      "weightG": 63,
+      "weightNote": "63 г по текущей странице; ранние руководства могут описывать другую ревизию.",
+      "sensor": "PixArt PAW3311",
+      "dpiMax": 22000,
+      "dpiMin": null,
+      "speedIps": 400,
+      "accelerationG": 40,
+      "pollingHzIncluded": 1000,
+      "pollingHzMax": 1000,
+      "pollingNote": "В проверенных официальных материалах не подтверждено.",
+      "dimensionsMm": {
+        "length": 128,
+        "width": 64,
+        "height": 40
+      },
+      "batteryHours": 65,
+      "batteryNote": "Заявление производителя; частота опроса и условия тестирования не указаны.",
+      "shape": "Симметричная, боковые кнопки слева",
+      "shapeSource": "Классификация по официальным изображениям; не рекомендация хвата.",
+      "recommendedGrip": null,
+      "switches": "HUANO, 20 млн нажатий",
+      "connectivity": [
+        "2,4 ГГц",
+        "Bluetooth",
+        "USB-C"
+      ],
+      "id": "attack-shark-x11",
+      "brand": "Attack Shark",
+      "name": "X11",
+      "variant": "White / Default",
+      "color": "Белый",
+      "price": {
+        "amount": null,
+        "currency": null,
+        "listAmount": null,
+        "region": "Global",
+        "observedAt": "2026-10-31",
+        "availability": "unknown",
+        "note": "Цена и доступность конкретного регионального предложения не подтверждены.",
+        "url": "https://attackshark.com/products/attack-shark-x11-wireless-gaming-mouse-charging-dock"
+      },
+      "image": "/images/attack-shark-x11.png",
+      "gallery": [
+        "/images/attack-shark-x11.png"
+      ],
+      "model3d": null,
+      "model3dNote": "Официальный GLB/GLTF-ассет для этой модели не найден в проверенных материалах.",
+      "sources": [
+        "https://attackshark.com/products/attack-shark-x11-wireless-gaming-mouse-charging-dock"
+      ],
+      "imageSource": "https://cdn.shopify.com/s/files/1/0823/5050/6282/files/X11_2.png?v=1777368041"
+    },
+    {
+      "weightG": 46,
+      "weightNote": "Номинальное значение производителя; фактическая масса может отличаться.",
+      "sensor": "PixArt PAW3395",
+      "dpiMax": 26000,
+      "dpiMin": null,
+      "speedIps": 650,
+      "accelerationG": 50,
+      "pollingHzIncluded": 8000,
+      "pollingHzMax": 8000,
+      "pollingNote": "Производитель заявляет 8000 Гц по беспроводному соединению с Nano-приёмником.",
+      "dimensionsMm": {
+        "length": null,
+        "width": null,
+        "height": null
+      },
+      "batteryHours": 200,
+      "batteryNote": "Заявление производителя; частота опроса и условия тестирования не указаны.",
+      "shape": "Симметричная, боковые кнопки слева",
+      "shapeSource": "Классификация по официальным изображениям; не рекомендация хвата.",
+      "recommendedGrip": null,
+      "switches": "Kailh GM 8.0",
+      "connectivity": [
+        "2,4 ГГц",
+        "Bluetooth",
+        "USB-C"
+      ],
+      "id": "attack-shark-r3",
+      "brand": "Attack Shark",
+      "name": "R3",
+      "variant": "White",
+      "color": "Белый",
+      "price": {
+        "amount": null,
+        "currency": null,
+        "listAmount": null,
+        "region": "Global",
+        "observedAt": "2026-10-31",
+        "availability": "unknown",
+        "note": "Цена и доступность конкретного регионального предложения не подтверждены.",
+        "url": "https://attackshark.com/products/attack-shark-r3-magnesium-alloy-wireless-gaming-mouse"
+      },
+      "image": "/images/attack-shark-r3.png",
+      "gallery": [
+        "/images/attack-shark-r3.png"
+      ],
+      "model3d": null,
+      "model3dNote": "Официальный GLB/GLTF-ассет для этой модели не найден в проверенных материалах.",
+      "sources": [
+        "https://attackshark.com/products/attack-shark-r3-magnesium-alloy-wireless-gaming-mouse"
+      ],
+      "imageSource": "https://cdn.shopify.com/s/files/1/0823/5050/6282/files/R3_8.png?v=1777361722"
+    },
+    {
+      "weightG": 49,
+      "weightNote": "Номинальное значение производителя; фактическая масса может отличаться.",
+      "sensor": "PixArt PAW3950",
+      "dpiMax": 42000,
+      "dpiMin": null,
+      "speedIps": 750,
+      "accelerationG": 50,
+      "pollingHzIncluded": 1000,
+      "pollingHzMax": 1000,
+      "pollingNote": "X3 MAX — 1000 Гц согласно сравнительной таблице; не путать с X3 PRO 8K.",
+      "dimensionsMm": {
+        "length": 118.5,
+        "width": 61,
+        "height": 39.7
+      },
+      "batteryHours": 200,
+      "batteryNote": "Заявление производителя; частота опроса и условия тестирования не указаны.",
+      "shape": "Симметричная, боковые кнопки слева",
+      "shapeSource": "Классификация по официальным изображениям; не рекомендация хвата.",
+      "recommendedGrip": null,
+      "switches": "Omron, 100 млн нажатий",
+      "connectivity": [
+        "2,4 ГГц",
+        "Bluetooth",
+        "USB-C"
+      ],
+      "id": "attack-shark-x3-max",
+      "brand": "Attack Shark",
+      "name": "X3 MAX",
+      "variant": "White",
+      "color": "Белый",
+      "price": {
+        "amount": null,
+        "currency": null,
+        "listAmount": null,
+        "region": "Global",
+        "observedAt": "2026-10-31",
+        "availability": "unknown",
+        "note": "Цена и доступность конкретного регионального предложения не подтверждены.",
+        "url": "https://attackshark.com/products/attack-shark-x3max"
+      },
+      "image": "/images/attack-shark-x3-max.png",
+      "gallery": [
+        "/images/attack-shark-x3-max.png"
+      ],
+      "model3d": null,
+      "model3dNote": "Официальный GLB/GLTF-ассет для этой модели не найден в проверенных материалах.",
+      "sources": [
+        "https://attackshark.com/products/attack-shark-x3max"
+      ],
+      "imageSource": "https://cdn.shopify.com/s/files/1/0823/5050/6282/files/X3MAX_3.png?v=1777365487"
+    },
+    {
+      "weightG": 55,
+      "weightNote": "Номинальное значение производителя; фактическая масса может отличаться.",
+      "sensor": "PixArt PAW3395 SE",
+      "dpiMax": null,
+      "dpiMin": null,
+      "speedIps": null,
+      "accelerationG": null,
+      "pollingHzIncluded": 1000,
+      "pollingHzMax": 1000,
+      "pollingNote": "В текущей таблице производителя: 1000 Гц по проводу и без провода.",
+      "dimensionsMm": {
+        "length": 120.6,
+        "width": 64.1,
+        "height": 37.6
+      },
+      "batteryHours": 70,
+      "batteryNote": "До 70 часов при 1000 Гц по таблице производителя.",
+      "shape": "Симметричная, боковые кнопки слева",
+      "shapeSource": "Классификация по официальным изображениям; не рекомендация хвата.",
+      "recommendedGrip": null,
+      "switches": "Huano Blue Glow V2",
+      "connectivity": [
+        "2,4 ГГц",
+        "Bluetooth",
+        "USB-C"
+      ],
+      "id": "vxe-r1-seplus",
+      "brand": "VXE",
+      "name": "R1 SE+",
+      "variant": "R1 SE+ / White",
+      "color": "Белый",
+      "dimensionsNote": "Использована таблица спецификаций: 120,6 × 64,1 × 37,6 мм. Краткий текст той же страницы сообщает 120,6 × 64 × 37,8 мм.",
+      "price": {
+        "amount": null,
+        "currency": null,
+        "listAmount": null,
+        "region": "Global",
+        "observedAt": "2026-10-31",
+        "availability": "unknown",
+        "note": "Цена и доступность конкретного регионального предложения не подтверждены.",
+        "url": "https://vxe.com/products/vxe-dragonfly-r1-series-wireless-mouse"
+      },
+      "image": "/images/vxe-r1-seplus.webp",
+      "gallery": [
+        "/images/vxe-r1-seplus.webp"
+      ],
+      "model3d": null,
+      "model3dNote": "Официальный GLB/GLTF-ассет для этой модели не найден в проверенных материалах.",
+      "sources": [
+        "https://vxe.com/products/vxe-dragonfly-r1-series-wireless-mouse",
+        "https://vxe.com/cdn/shop/files/VXE_R1-M_14.jpg?v=1769140303"
+      ],
+      "imageSource": "https://cdn.shopify.com/s/files/1/0797/6334/1526/files/R1_White.webp?v=1767515965"
+    },
+    {
+      "weightG": 51,
+      "weightNote": "Номинальное значение производителя; фактическая масса может отличаться.",
+      "sensor": "PixArt PAW3395",
+      "dpiMax": null,
+      "dpiMin": null,
+      "speedIps": null,
+      "accelerationG": null,
+      "pollingHzIncluded": 1000,
+      "pollingHzMax": 1000,
+      "pollingNote": "В текущей таблице производителя: 1000 Гц по проводу и без провода.",
+      "dimensionsMm": {
+        "length": 120.6,
+        "width": 64.1,
+        "height": 37.6
+      },
+      "batteryHours": 40,
+      "batteryNote": "До 40 часов при 1000 Гц по таблице производителя.",
+      "shape": "Симметричная, боковые кнопки слева",
+      "shapeSource": "Классификация по официальным изображениям; не рекомендация хвата.",
+      "recommendedGrip": null,
+      "switches": "Huano Ice Berry Pink Dot",
+      "connectivity": [
+        "2,4 ГГц",
+        "Bluetooth",
+        "USB-C"
+      ],
+      "id": "vxe-r1",
+      "brand": "VXE",
+      "name": "R1",
+      "variant": "R1 / White",
+      "color": "Белый",
+      "dimensionsNote": "Использована таблица спецификаций: 120,6 × 64,1 × 37,6 мм. Краткий текст той же страницы сообщает 120,6 × 64 × 37,8 мм.",
+      "price": {
+        "amount": null,
+        "currency": null,
+        "listAmount": null,
+        "region": "Global",
+        "observedAt": "2026-10-31",
+        "availability": "unknown",
+        "note": "Цена и доступность конкретного регионального предложения не подтверждены.",
+        "url": "https://vxe.com/products/vxe-dragonfly-r1-series-wireless-mouse"
+      },
+      "image": "/images/vxe-r1.webp",
+      "gallery": [
+        "/images/vxe-r1.webp"
+      ],
+      "model3d": null,
+      "model3dNote": "Официальный GLB/GLTF-ассет для этой модели не найден в проверенных материалах.",
+      "sources": [
+        "https://vxe.com/products/vxe-dragonfly-r1-series-wireless-mouse",
+        "https://vxe.com/cdn/shop/files/VXE_R1-M_14.jpg?v=1769140303"
+      ],
+      "imageSource": "https://cdn.shopify.com/s/files/1/0797/6334/1526/files/R1_White.webp?v=1767515965"
+    },
+    {
+      "weightG": 48,
+      "weightNote": "Номинальное значение производителя; фактическая масса может отличаться.",
+      "sensor": "PixArt PAW3395",
+      "dpiMax": null,
+      "dpiMin": null,
+      "speedIps": null,
+      "accelerationG": null,
+      "pollingHzIncluded": 1000,
+      "pollingHzMax": 4000,
+      "pollingNote": "Комплектный приёмник 1000 Гц; выше 1000 Гц необходим отдельный 4K Dongle.",
+      "dimensionsMm": {
+        "length": 120.6,
+        "width": 64.1,
+        "height": 37.6
+      },
+      "batteryHours": 75,
+      "batteryNote": "До 75 часов при 1000 Гц по таблице производителя.",
+      "shape": "Симметричная, боковые кнопки слева",
+      "shapeSource": "Классификация по официальным изображениям; не рекомендация хвата.",
+      "recommendedGrip": null,
+      "switches": "Huano Ice Berry Pink Dot",
+      "connectivity": [
+        "2,4 ГГц",
+        "USB-C"
+      ],
+      "id": "vxe-r1-pro",
+      "brand": "VXE",
+      "name": "R1 Pro",
+      "variant": "R1 Pro / White",
+      "color": "Белый",
+      "dimensionsNote": "Использована таблица спецификаций: 120,6 × 64,1 × 37,6 мм. Краткий текст той же страницы сообщает 120,6 × 64 × 37,8 мм.",
+      "price": {
+        "amount": null,
+        "currency": null,
+        "listAmount": null,
+        "region": "Global",
+        "observedAt": "2026-10-31",
+        "availability": "unknown",
+        "note": "Цена и доступность конкретного регионального предложения не подтверждены.",
+        "url": "https://vxe.com/products/vxe-dragonfly-r1-series-wireless-mouse"
+      },
+      "image": "/images/vxe-r1-pro.webp",
+      "gallery": [
+        "/images/vxe-r1-pro.webp"
+      ],
+      "model3d": null,
+      "model3dNote": "Официальный GLB/GLTF-ассет для этой модели не найден в проверенных материалах.",
+      "sources": [
+        "https://vxe.com/products/vxe-dragonfly-r1-series-wireless-mouse",
+        "https://vxe.com/cdn/shop/files/VXE_R1-M_14.jpg?v=1769140303"
+      ],
+      "imageSource": "https://cdn.shopify.com/s/files/1/0797/6334/1526/files/R1_White.webp?v=1767515965"
+    },
+    {
+      "weightG": 54,
+      "weightNote": "Номинальное значение производителя; фактическая масса может отличаться.",
+      "sensor": "PixArt PAW3395",
+      "dpiMax": null,
+      "dpiMin": null,
+      "speedIps": null,
+      "accelerationG": null,
+      "pollingHzIncluded": 1000,
+      "pollingHzMax": 4000,
+      "pollingNote": "Комплектный приёмник 1000 Гц; выше 1000 Гц необходим отдельный 4K Dongle.",
+      "dimensionsMm": {
+        "length": 120.6,
+        "width": 64.1,
+        "height": 37.6
+      },
+      "batteryHours": 150,
+      "batteryNote": "До 150 часов при 1000 Гц по таблице производителя.",
+      "shape": "Симметричная, боковые кнопки слева",
+      "shapeSource": "Классификация по официальным изображениям; не рекомендация хвата.",
+      "recommendedGrip": null,
+      "switches": "Kailh White Blade",
+      "connectivity": [
+        "2,4 ГГц",
+        "USB-C"
+      ],
+      "id": "vxe-r1-pro-max",
+      "brand": "VXE",
+      "name": "R1 Pro Max",
+      "variant": "R1 Pro Max / White",
+      "color": "Белый",
+      "dimensionsNote": "Использована таблица спецификаций: 120,6 × 64,1 × 37,6 мм. Краткий текст той же страницы сообщает 120,6 × 64 × 37,8 мм.",
+      "price": {
+        "amount": null,
+        "currency": null,
+        "listAmount": null,
+        "region": "Global",
+        "observedAt": "2026-10-31",
+        "availability": "unknown",
+        "note": "Цена и доступность конкретного регионального предложения не подтверждены.",
+        "url": "https://vxe.com/products/vxe-dragonfly-r1-series-wireless-mouse"
+      },
+      "image": "/images/vxe-r1-pro-max.webp",
+      "gallery": [
+        "/images/vxe-r1-pro-max.webp"
+      ],
+      "model3d": null,
+      "model3dNote": "Официальный GLB/GLTF-ассет для этой модели не найден в проверенных материалах.",
+      "sources": [
+        "https://vxe.com/products/vxe-dragonfly-r1-series-wireless-mouse",
+        "https://vxe.com/cdn/shop/files/VXE_R1-M_14.jpg?v=1769140303"
+      ],
+      "imageSource": "https://cdn.shopify.com/s/files/1/0797/6334/1526/files/R1_White.webp?v=1767515965"
+    },
+    {
+      "weightG": 49,
+      "weightNote": "Чёрная версия; допуск ±3 г. По примечанию производителя белая на 1 г тяжелее.",
+      "sensor": "PixArt PAW3395",
+      "dpiMax": 26000,
+      "dpiMin": null,
+      "speedIps": null,
+      "accelerationG": null,
+      "pollingHzIncluded": null,
+      "pollingHzMax": 4000,
+      "pollingNote": "Совместима с 4K-приёмником. Комплектность приёмника для выбранного варианта отдельно не подтверждена.",
+      "dimensionsMm": {
+        "length": 121.2,
+        "width": 63.5,
+        "height": 37.6
+      },
+      "batteryHours": 65,
+      "batteryNote": "Заявление производителя; частота опроса и условия тестирования не указаны.",
+      "shape": "Симметричная, боковые кнопки слева",
+      "shapeSource": "Классификация по официальным изображениям; не рекомендация хвата.",
+      "recommendedGrip": null,
+      "switches": "Kailh Golden Black Mamba",
+      "connectivity": [
+        "2,4 ГГц",
+        "USB-C"
+      ],
+      "id": "vgn-f1-pro",
+      "brand": "VGN",
+      "name": "F1 Pro",
+      "variant": "Black / F1 Pro",
+      "color": "Чёрный",
+      "price": {
+        "amount": null,
+        "currency": null,
+        "listAmount": null,
+        "region": "Global",
+        "observedAt": "2026-10-31",
+        "availability": "unknown",
+        "note": "Цена и доступность конкретного регионального предложения не подтверждены.",
+        "url": "https://vgnlab.com/products/vgn-dragonfly-f1-series-wireless-mouse"
+      },
+      "image": "/images/vgn-f1-pro.jpg",
+      "gallery": [
+        "/images/vgn-f1-pro.jpg"
+      ],
+      "model3d": null,
+      "model3dNote": "Официальный GLB/GLTF-ассет для этой модели не найден в проверенных материалах.",
+      "sources": [
+        "https://vgnlab.com/products/vgn-dragonfly-f1-series-wireless-mouse",
+        "https://vgnlab.com/cdn/shop/files/DragonflyF1_-1000px_12.png?v=1745307114"
+      ],
+      "imageSource": "https://cdn.shopify.com/s/files/1/0775/4927/3398/files/F1Pro-Black.jpg?v=1751017964"
+    },
+    {
+      "weightG": 55,
+      "weightNote": "Чёрная версия; допуск ±3 г. По примечанию производителя белая на 1 г тяжелее.",
+      "sensor": "PixArt PAW3395",
+      "dpiMax": 26000,
+      "dpiMin": null,
+      "speedIps": null,
+      "accelerationG": null,
+      "pollingHzIncluded": null,
+      "pollingHzMax": 4000,
+      "pollingNote": "Совместима с 4K-приёмником. Комплектность приёмника для выбранного варианта отдельно не подтверждена.",
+      "dimensionsMm": {
+        "length": 121.2,
+        "width": 63.5,
+        "height": 37.6
+      },
+      "batteryHours": 130,
+      "batteryNote": "Заявление производителя; частота опроса и условия тестирования не указаны.",
+      "shape": "Симметричная, боковые кнопки слева",
+      "shapeSource": "Классификация по официальным изображениям; не рекомендация хвата.",
+      "recommendedGrip": null,
+      "switches": "Kailh Golden Black Mamba",
+      "connectivity": [
+        "2,4 ГГц",
+        "USB-C"
+      ],
+      "id": "vgn-f1-pro-max",
+      "brand": "VGN",
+      "name": "F1 Pro Max",
+      "variant": "Black / F1 Pro Max",
+      "color": "Чёрный",
+      "price": {
+        "amount": null,
+        "currency": null,
+        "listAmount": null,
+        "region": "Global",
+        "observedAt": "2026-10-31",
+        "availability": "unknown",
+        "note": "Цена и доступность конкретного регионального предложения не подтверждены.",
+        "url": "https://vgnlab.com/products/vgn-dragonfly-f1-series-wireless-mouse"
+      },
+      "image": "/images/vgn-f1-pro-max.jpg",
+      "gallery": [
+        "/images/vgn-f1-pro-max.jpg"
+      ],
+      "model3d": null,
+      "model3dNote": "Официальный GLB/GLTF-ассет для этой модели не найден в проверенных материалах.",
+      "sources": [
+        "https://vgnlab.com/products/vgn-dragonfly-f1-series-wireless-mouse",
+        "https://vgnlab.com/cdn/shop/files/DragonflyF1_-1000px_12.png?v=1745307114"
+      ],
+      "imageSource": "https://cdn.shopify.com/s/files/1/0775/4927/3398/files/F1Pro-Black.jpg?v=1751017964"
+    },
+    {
+      "weightG": 55,
+      "weightNote": "Чёрная версия; допуск ±3 г. По примечанию производителя белая на 1 г тяжелее.",
+      "sensor": "PixArt PAW3395",
+      "dpiMax": 26000,
+      "dpiMin": null,
+      "speedIps": null,
+      "accelerationG": null,
+      "pollingHzIncluded": null,
+      "pollingHzMax": 4000,
+      "pollingNote": "Совместима с 4K-приёмником. Комплектность приёмника для выбранного варианта отдельно не подтверждена.",
+      "dimensionsMm": {
+        "length": 121.2,
+        "width": 63.5,
+        "height": 37.6
+      },
+      "batteryHours": 130,
+      "batteryNote": "Заявление производителя; частота опроса и условия тестирования не указаны.",
+      "shape": "Симметричная, боковые кнопки слева",
+      "shapeSource": "Классификация по официальным изображениям; не рекомендация хвата.",
+      "recommendedGrip": null,
+      "switches": "Huano Ice Berry Pink Dot",
+      "connectivity": [
+        "2,4 ГГц",
+        "USB-C"
+      ],
+      "id": "vgn-f1-moba",
+      "brand": "VGN",
+      "name": "F1 MOBA",
+      "variant": "Black / F1 Moba",
+      "color": "Чёрный",
+      "price": {
+        "amount": null,
+        "currency": null,
+        "listAmount": null,
+        "region": "Global",
+        "observedAt": "2026-10-31",
+        "availability": "unknown",
+        "note": "Цена и доступность конкретного регионального предложения не подтверждены.",
+        "url": "https://vgnlab.com/products/vgn-dragonfly-f1-series-wireless-mouse"
+      },
+      "image": "/images/vgn-f1-moba.jpg",
+      "gallery": [
+        "/images/vgn-f1-moba.jpg"
+      ],
+      "model3d": null,
+      "model3dNote": "Официальный GLB/GLTF-ассет для этой модели не найден в проверенных материалах.",
+      "sources": [
+        "https://vgnlab.com/products/vgn-dragonfly-f1-series-wireless-mouse",
+        "https://vgnlab.com/cdn/shop/files/DragonflyF1_-1000px_12.png?v=1745307114"
+      ],
+      "imageSource": "https://cdn.shopify.com/s/files/1/0775/4927/3398/files/F1Moba-Black.jpg?v=1751017964"
+    },
+    {
+      "weightG": 56,
+      "weightNote": "Номинальное значение производителя; фактическая масса может отличаться.",
+      "sensor": "PixArt PAW3395",
+      "dpiMax": 26000,
+      "dpiMin": null,
+      "speedIps": null,
+      "accelerationG": null,
+      "pollingHzIncluded": 8000,
+      "pollingHzMax": 8000,
+      "pollingNote": "8000 Гц без провода; 1000 Гц по USB. Приёмник встроен в комплектную магнитную базу.",
+      "dimensionsMm": {
+        "length": null,
+        "width": null,
+        "height": null
+      },
+      "batteryHours": null,
+      "batteryNote": "Заявление производителя; частота опроса и условия тестирования не указаны.",
+      "shape": "Симметричная, боковые кнопки слева",
+      "shapeSource": "Классификация по официальным изображениям; не рекомендация хвата.",
+      "recommendedGrip": null,
+      "switches": "Huano Green Shell White Dot Transparent",
+      "connectivity": [
+        "2,4 ГГц",
+        "Bluetooth",
+        "USB-C"
+      ],
+      "id": "ajazz-aj159-pro",
+      "brand": "AJAZZ",
+      "name": "AJ159 PRO",
+      "variant": "AJ159 PRO / White",
+      "color": "Белый",
+      "price": {
+        "amount": null,
+        "currency": null,
+        "listAmount": null,
+        "region": "Global",
+        "observedAt": "2026-10-31",
+        "availability": "unknown",
+        "note": "Цена и доступность конкретного регионального предложения не подтверждены.",
+        "url": "https://ajazz.net/products/ajazz-aj159-series-gaming-mouse"
+      },
+      "image": "/images/ajazz-aj159-pro.jpg",
+      "gallery": [
+        "/images/ajazz-aj159-pro.jpg"
+      ],
+      "model3d": null,
+      "model3dNote": "Официальный GLB/GLTF-ассет для этой модели не найден в проверенных материалах.",
+      "sources": [
+        "https://ajazz.net/products/ajazz-aj159-series-gaming-mouse"
+      ],
+      "imageSource": "https://cdn.shopify.com/s/files/1/0715/8667/6875/files/AJ159PRO_1.jpg?v=1764296889"
+    },
+    {
+      "weightG": 56,
+      "weightNote": "Номинальное значение производителя; фактическая масса может отличаться.",
+      "sensor": "PixArt PAW3950",
+      "dpiMax": 42000,
+      "dpiMin": null,
+      "speedIps": 750,
+      "accelerationG": 50,
+      "pollingHzIncluded": null,
+      "pollingHzMax": 8000,
+      "pollingNote": "До 8000 Гц без провода и 1000 Гц по USB; состав выбранной комплектации отдельно не подтверждён. DPI: 30 000 штатно, до 42 000 при разгоне.",
+      "dimensionsMm": {
+        "length": null,
+        "width": null,
+        "height": null
+      },
+      "batteryHours": null,
+      "batteryNote": "Заявление производителя; частота опроса и условия тестирования не указаны.",
+      "shape": "Эргономичная, для правой руки",
+      "shapeSource": "Классификация по официальным изображениям; не рекомендация хвата.",
+      "recommendedGrip": null,
+      "switches": "Huano Green Shell White Dot Transparent",
+      "connectivity": [
+        "2,4 ГГц",
+        "Bluetooth",
+        "USB-C"
+      ],
+      "id": "ajazz-aj179-apex",
+      "brand": "AJAZZ",
+      "name": "AJ179 APEX",
+      "variant": "AJ179 APEX / White",
+      "color": "Белый",
+      "price": {
+        "amount": null,
+        "currency": null,
+        "listAmount": null,
+        "region": "Global",
+        "observedAt": "2026-10-31",
+        "availability": "unknown",
+        "note": "Цена и доступность конкретного регионального предложения не подтверждены.",
+        "url": "https://ajazz.net/products/ajazz-aj179-mouse"
+      },
+      "image": "/images/ajazz-aj179-apex.jpg",
+      "gallery": [
+        "/images/ajazz-aj179-apex.jpg"
+      ],
+      "model3d": null,
+      "model3dNote": "Официальный GLB/GLTF-ассет для этой модели не найден в проверенных материалах.",
+      "sources": [
+        "https://ajazz.net/products/ajazz-aj179-mouse"
+      ],
+      "imageSource": "https://cdn.shopify.com/s/files/1/0715/8667/6875/files/279861e7-e02d-4430-9819-536eac8aa271.jpg?v=1764296892"
+    },
+    {
+      "weightG": 55,
+      "weightNote": "55 ±3 г по официальной инфографике.",
+      "sensor": "PixArt PAW3395",
+      "dpiMax": 26000,
+      "dpiMin": null,
+      "speedIps": 650,
+      "accelerationG": 50,
+      "pollingHzIncluded": 1000,
+      "pollingHzMax": 1000,
+      "pollingNote": "В проверенных официальных материалах не подтверждено.",
+      "dimensionsMm": {
+        "length": null,
+        "width": null,
+        "height": null
+      },
+      "batteryHours": 80,
+      "batteryNote": "До 80 часов непрерывной работы; частота опроса не указана.",
+      "shape": "Симметричная, боковые кнопки слева",
+      "shapeSource": "Классификация по официальным изображениям; не рекомендация хвата.",
+      "recommendedGrip": null,
+      "switches": "Huano Purple Shell White Dot",
+      "connectivity": [
+        "2,4 ГГц",
+        "Bluetooth",
+        "USB-C"
+      ],
+      "id": "kysona-aztec",
+      "brand": "KYSONA",
+      "name": "Aztec",
+      "variant": "Aztec White",
+      "color": "Белый",
+      "price": {
+        "amount": null,
+        "currency": null,
+        "listAmount": null,
+        "region": "Global",
+        "observedAt": "2026-10-31",
+        "availability": "unknown",
+        "note": "Цена и доступность конкретного регионального предложения не подтверждены.",
+        "url": "https://shop.kysona.com/products/aztec"
+      },
+      "image": "/images/kysona-aztec.jpg",
+      "gallery": [
+        "/images/kysona-aztec.jpg"
+      ],
+      "model3d": null,
+      "model3dNote": "Официальный GLB/GLTF-ассет для этой модели не найден в проверенных материалах.",
+      "sources": [
+        "https://shop.kysona.com/products/aztec",
+        "https://cdn.shopify.com/s/files/1/0809/0697/7595/files/63166d33d9a3233c91f588a07fc7ffee.jpg?v=1742887724"
+      ],
+      "imageSource": "https://cdn.shopify.com/s/files/1/0809/0697/7595/files/M600S_SKU_ed05c10f-298d-427b-b3ed-159ce454b2ad.jpg?v=1742887908"
+    },
+    {
+      "weightG": 55,
+      "weightNote": "Номинальное значение производителя; фактическая масса может отличаться.",
+      "sensor": "PixArt PAW3395",
+      "dpiMax": 26000,
+      "dpiMin": 400,
+      "speedIps": 650,
+      "accelerationG": 50,
+      "pollingHzIncluded": 1000,
+      "pollingHzMax": 1000,
+      "pollingNote": "В проверенных официальных материалах не подтверждено.",
+      "dimensionsMm": {
+        "length": 118,
+        "width": 62,
+        "height": 40
+      },
+      "batteryHours": 200,
+      "batteryNote": "Заявлено 200+ часов; частота и сценарий тестирования не раскрыты.",
+      "shape": "Симметричная, боковые кнопки слева",
+      "shapeSource": "Классификация по официальным изображениям; не рекомендация хвата.",
+      "recommendedGrip": null,
+      "switches": "Huano, 80 млн нажатий",
+      "connectivity": [
+        "2,4 ГГц",
+        "Bluetooth",
+        "USB-C"
+      ],
+      "id": "kysona-m600-v2",
+      "brand": "KYSONA",
+      "name": "M600 V2",
+      "variant": "M600 V2 Black",
+      "color": "Чёрный",
+      "price": {
+        "amount": null,
+        "currency": null,
+        "listAmount": null,
+        "region": "Global",
+        "observedAt": "2026-10-31",
+        "availability": "unknown",
+        "note": "Цена и доступность конкретного регионального предложения не подтверждены.",
+        "url": "https://shop.kysona.com/products/m600-ultra-lightweight-wireless-gaming-mouse"
+      },
+      "image": "/images/kysona-m600-v2.jpg",
+      "gallery": [
+        "/images/kysona-m600-v2.jpg"
+      ],
+      "model3d": null,
+      "model3dNote": "Официальный GLB/GLTF-ассет для этой модели не найден в проверенных материалах.",
+      "sources": [
+        "https://shop.kysona.com/products/m600-ultra-lightweight-wireless-gaming-mouse",
+        "https://cdn.shopify.com/s/files/1/0809/0697/7595/files/M600A-__13_486b2efa-9a3f-4ad8-84f6-8a572643dc6a.jpg?v=1742884675"
+      ],
+      "imageSource": "https://cdn.shopify.com/s/files/1/0809/0697/7595/files/SKU-2_dd7c36b9-fefe-4570-bae4-444228571ee4.jpg?v=1742885255"
+    },
+    {
+      "weightG": 58,
+      "weightNote": "Номинальное значение производителя; фактическая масса может отличаться.",
+      "sensor": "PixArt PAW3395",
+      "dpiMax": null,
+      "dpiMin": null,
+      "speedIps": null,
+      "accelerationG": null,
+      "pollingHzIncluded": 1000,
+      "pollingHzMax": 1000,
+      "pollingNote": "В проверенных официальных материалах не подтверждено.",
+      "dimensionsMm": {
+        "length": null,
+        "width": null,
+        "height": null
+      },
+      "batteryHours": 100,
+      "batteryNote": "До 100 часов непрерывной игры; частота опроса не указана.",
+      "shape": "Эргономичная, для правой руки",
+      "shapeSource": "Классификация по официальным изображениям; не рекомендация хвата.",
+      "recommendedGrip": null,
+      "switches": null,
+      "connectivity": [
+        "2,4 ГГц",
+        "Bluetooth",
+        "USB-C"
+      ],
+      "id": "kysona-m511",
+      "brand": "KYSONA",
+      "name": "M511",
+      "variant": "M511 Black",
+      "color": "Чёрный",
+      "price": {
+        "amount": null,
+        "currency": null,
+        "listAmount": null,
+        "region": "Global",
+        "observedAt": "2026-10-31",
+        "availability": "unknown",
+        "note": "Цена и доступность конкретного регионального предложения не подтверждены.",
+        "url": "https://shop.kysona.com/products/m511-right-hand-mouse"
+      },
+      "image": "/images/kysona-m511.png",
+      "gallery": [
+        "/images/kysona-m511.png"
+      ],
+      "model3d": null,
+      "model3dNote": "Официальный GLB/GLTF-ассет для этой модели не найден в проверенных материалах.",
+      "sources": [
+        "https://shop.kysona.com/products/m511-right-hand-mouse",
+        "https://cdn.shopify.com/s/files/1/0809/0697/7595/files/M511_2786567a-f862-4262-a9dc-5812ffd8e806.jpg?v=1742886129"
+      ],
+      "imageSource": "https://cdn.shopify.com/s/files/1/0809/0697/7595/files/2_7fd561d8-d455-47d7-96f4-7c7f3e45965c.png?v=1742886161"
+    },
+    {
+      "weightG": 58,
+      "weightNote": "58 ±2 г по странице производителя.",
+      "sensor": "PixArt PAW3395",
+      "dpiMax": 26000,
+      "dpiMin": null,
+      "speedIps": 650,
+      "accelerationG": 50,
+      "pollingHzIncluded": null,
+      "pollingHzMax": null,
+      "pollingNote": "В проверенных официальных материалах не подтверждено.",
+      "dimensionsMm": {
+        "length": null,
+        "width": null,
+        "height": null
+      },
+      "batteryHours": null,
+      "batteryNote": "Заявление производителя; частота опроса и условия тестирования не указаны.",
+      "shape": "Симметричная, боковые кнопки слева",
+      "shapeSource": "Классификация по официальным изображениям; не рекомендация хвата.",
+      "recommendedGrip": null,
+      "switches": "TTC, 60 млн нажатий",
+      "connectivity": [
+        "2,4 ГГц",
+        "Bluetooth",
+        "USB-C"
+      ],
+      "id": "darmoshark-m3",
+      "brand": "Darmoshark",
+      "name": "M3",
+      "variant": "Black",
+      "color": "Чёрный",
+      "price": {
+        "amount": null,
+        "currency": null,
+        "listAmount": null,
+        "region": "Global",
+        "observedAt": "2026-10-31",
+        "availability": "unknown",
+        "note": "Цена и доступность конкретного регионального предложения не подтверждены.",
+        "url": "https://darmoshark.com/products/darmoshark-m3-kiran-trio-mode-game-mouse"
+      },
+      "image": "/images/darmoshark-m3.jpg",
+      "gallery": [
+        "/images/darmoshark-m3.jpg"
+      ],
+      "model3d": null,
+      "model3dNote": "Официальный GLB/GLTF-ассет для этой модели не найден в проверенных материалах.",
+      "sources": [
+        "https://darmoshark.com/products/darmoshark-m3-kiran-trio-mode-game-mouse"
+      ],
+      "imageSource": "https://cdn.shopify.com/s/files/1/0647/6319/9593/files/16.jpg?v=1762155651"
+    },
+    {
+      "weightG": 55,
+      "weightNote": "55 ±2 г по странице производителя.",
+      "sensor": "PixArt PAW3395",
+      "dpiMax": 26000,
+      "dpiMin": null,
+      "speedIps": 650,
+      "accelerationG": 50,
+      "pollingHzIncluded": null,
+      "pollingHzMax": null,
+      "pollingNote": "В проверенных официальных материалах не подтверждено.",
+      "dimensionsMm": {
+        "length": null,
+        "width": null,
+        "height": null
+      },
+      "batteryHours": null,
+      "batteryNote": "Заявление производителя; частота опроса и условия тестирования не указаны.",
+      "shape": "Симметричная, боковые кнопки слева",
+      "shapeSource": "Классификация по официальным изображениям; не рекомендация хвата.",
+      "recommendedGrip": null,
+      "switches": "TTC, 60 млн нажатий",
+      "connectivity": [
+        "2,4 ГГц",
+        "Bluetooth",
+        "USB-C"
+      ],
+      "id": "darmoshark-m3-pro",
+      "brand": "Darmoshark",
+      "name": "M3 PRO",
+      "variant": "Black",
+      "color": "Чёрный",
+      "price": {
+        "amount": null,
+        "currency": null,
+        "listAmount": null,
+        "region": "Global",
+        "observedAt": "2026-10-31",
+        "availability": "unknown",
+        "note": "Цена и доступность конкретного регионального предложения не подтверждены.",
+        "url": "https://darmoshark.com/products/darmoshark-m3-pro-kiran-trio-mode-game-mouse"
+      },
+      "image": "/images/darmoshark-m3-pro.jpg",
+      "gallery": [
+        "/images/darmoshark-m3-pro.jpg"
+      ],
+      "model3d": null,
+      "model3dNote": "Официальный GLB/GLTF-ассет для этой модели не найден в проверенных материалах.",
+      "sources": [
+        "https://darmoshark.com/products/darmoshark-m3-pro-kiran-trio-mode-game-mouse"
+      ],
+      "imageSource": "https://cdn.shopify.com/s/files/1/0647/6319/9593/files/4_6f799e6e-ef4f-4bc9-8c3a-af699870b974.jpg?v=1762156049"
+    },
+    {
+      "weightG": 64,
+      "weightNote": "64 ±2 г по странице производителя.",
+      "sensor": "PixArt PAW3395",
+      "dpiMax": 26000,
+      "dpiMin": null,
+      "speedIps": 650,
+      "accelerationG": 50,
+      "pollingHzIncluded": null,
+      "pollingHzMax": null,
+      "pollingNote": "В проверенных официальных материалах не подтверждено.",
+      "dimensionsMm": {
+        "length": null,
+        "width": null,
+        "height": null
+      },
+      "batteryHours": null,
+      "batteryNote": "Заявление производителя; частота опроса и условия тестирования не указаны.",
+      "shape": "Эргономичная, для правой руки",
+      "shapeSource": "Классификация по официальным изображениям; не рекомендация хвата.",
+      "recommendedGrip": null,
+      "switches": "TTC, 60 млн нажатий",
+      "connectivity": [
+        "2,4 ГГц",
+        "Bluetooth",
+        "USB-C"
+      ],
+      "id": "darmoshark-n3",
+      "brand": "Darmoshark",
+      "name": "N3",
+      "variant": "Black",
+      "color": "Чёрный",
+      "price": {
+        "amount": null,
+        "currency": null,
+        "listAmount": null,
+        "region": "Global",
+        "observedAt": "2026-10-31",
+        "availability": "unknown",
+        "note": "Цена и доступность конкретного регионального предложения не подтверждены.",
+        "url": "https://darmoshark.com/products/darmoshark-n3-horn-shark-trio-mode-game-mouse"
+      },
+      "image": "/images/darmoshark-n3.jpg",
+      "gallery": [
+        "/images/darmoshark-n3.jpg"
+      ],
+      "model3d": null,
+      "model3dNote": "Официальный GLB/GLTF-ассет для этой модели не найден в проверенных материалах.",
+      "sources": [
+        "https://darmoshark.com/products/darmoshark-n3-horn-shark-trio-mode-game-mouse"
+      ],
+      "imageSource": "https://cdn.shopify.com/s/files/1/0647/6319/9593/files/12_f639a1df-1a8b-4817-9541-50ffb1673e43.jpg?v=1762155909"
+    },
+    {
+      "weightG": 31,
+      "weightNote": "31 ±2 г по странице производителя.",
+      "sensor": "PixArt PAW3950",
+      "dpiMax": 30000,
+      "dpiMin": null,
+      "speedIps": 750,
+      "accelerationG": 50,
+      "pollingHzIncluded": 8000,
+      "pollingHzMax": 8000,
+      "pollingNote": "В описании указан NXP 8000 Гц Dongle с экраном.",
+      "dimensionsMm": {
+        "length": null,
+        "width": null,
+        "height": null
+      },
+      "batteryHours": null,
+      "batteryNote": "Заявление производителя; частота опроса и условия тестирования не указаны.",
+      "shape": "Симметричная, боковые кнопки слева",
+      "shapeSource": "Классификация по официальным изображениям; не рекомендация хвата.",
+      "recommendedGrip": null,
+      "switches": "TTC, 60 млн нажатий",
+      "connectivity": [
+        "2,4 ГГц",
+        "Bluetooth",
+        "USB-C"
+      ],
+      "id": "darmoshark-m5-air",
+      "brand": "Darmoshark",
+      "name": "M5 AIR",
+      "variant": "Black",
+      "color": "Чёрный",
+      "price": {
+        "amount": null,
+        "currency": null,
+        "listAmount": null,
+        "region": "Global",
+        "observedAt": "2026-10-31",
+        "availability": "unknown",
+        "note": "Цена и доступность конкретного регионального предложения не подтверждены.",
+        "url": "https://darmoshark.com/products/darmoshark-m5-air-mp-fish-head-trio-mode-game-mouse-with-carbon-fiber-material"
+      },
+      "image": "/images/darmoshark-m5-air.jpg",
+      "gallery": [
+        "/images/darmoshark-m5-air.jpg"
+      ],
+      "model3d": null,
+      "model3dNote": "Официальный GLB/GLTF-ассет для этой модели не найден в проверенных материалах.",
+      "sources": [
+        "https://darmoshark.com/products/darmoshark-m5-air-mp-fish-head-trio-mode-game-mouse-with-carbon-fiber-material"
+      ],
+      "imageSource": "https://cdn.shopify.com/s/files/1/0647/6319/9593/files/10_06bec603-8a3b-4694-a83e-7338448ed653.jpg?v=1762155841"
+    },
+    {
+      "weightG": null,
+      "weightNote": "Официальная страница подтверждает модель, но не публикует массу. Z1 не отождествляется с Z1 Pro.",
+      "sensor": null,
+      "dpiMax": null,
+      "dpiMin": null,
+      "speedIps": null,
+      "accelerationG": null,
+      "pollingHzIncluded": null,
+      "pollingHzMax": null,
+      "pollingNote": "Частота и комплектация приёмника на официальной странице не раскрыты.",
+      "dimensionsMm": {
+        "length": null,
+        "width": null,
+        "height": null
+      },
+      "batteryHours": null,
+      "batteryNote": "Заявление производителя; частота опроса и условия тестирования не указаны.",
+      "shape": "Форма не подтверждена",
+      "shapeSource": "Классификация по официальным изображениям; не рекомендация хвата.",
+      "recommendedGrip": null,
+      "switches": null,
+      "connectivity": [
+        "2,4 ГГц",
+        "USB-C"
+      ],
+      "id": "zaopin-z1",
+      "brand": "Zaopin",
+      "name": "Z1",
+      "variant": "Версия с официальной страницы",
+      "color": "Чёрный прозрачный",
+      "price": {
+        "amount": null,
+        "currency": null,
+        "listAmount": null,
+        "region": "Global",
+        "observedAt": "2026-10-31",
+        "availability": "unknown",
+        "note": "Цена и доступность конкретного регионального предложения не подтверждены.",
+        "url": "https://www.zaopinworld.com/product_273093.html"
+      },
+      "image": "/images/zaopin-z1.jpg",
+      "gallery": [
+        "/images/zaopin-z1.jpg"
+      ],
+      "model3d": null,
+      "model3dNote": "Официальный GLB/GLTF-ассет для этой модели не найден в проверенных материалах.",
+      "sources": [
+        "https://www.zaopinworld.com/product_273093.html"
+      ],
+      "imageSource": "http://cdn.xuansiwei.com/d796iujl7508/1676859187174/2fb91d4a13e1717eb3704891ff63e89.jpg?x-oss-process=style/small"
+    },
+    {
+      "weightG": null,
+      "weightNote": "Официальная страница подтверждает модель, но не публикует массу. Z1 не отождествляется с Z1 Pro.",
+      "sensor": null,
+      "dpiMax": null,
+      "dpiMin": null,
+      "speedIps": null,
+      "accelerationG": null,
+      "pollingHzIncluded": null,
+      "pollingHzMax": null,
+      "pollingNote": "Частота и комплектация приёмника на официальной странице не раскрыты.",
+      "dimensionsMm": {
+        "length": null,
+        "width": null,
+        "height": null
+      },
+      "batteryHours": null,
+      "batteryNote": "Заявление производителя; частота опроса и условия тестирования не указаны.",
+      "shape": "Форма не подтверждена",
+      "shapeSource": "Классификация по официальным изображениям; не рекомендация хвата.",
+      "recommendedGrip": null,
+      "switches": null,
+      "connectivity": [
+        "2,4 ГГц",
+        "Bluetooth",
+        "USB-C"
+      ],
+      "id": "zaopin-z2",
+      "brand": "Zaopin",
+      "name": "Z2",
+      "variant": "Версия с официальной страницы",
+      "color": "Красный",
+      "price": {
+        "amount": null,
+        "currency": null,
+        "listAmount": null,
+        "region": "Global",
+        "observedAt": "2026-10-31",
+        "availability": "unknown",
+        "note": "Цена и доступность конкретного регионального предложения не подтверждены.",
+        "url": "https://www.zaopinworld.com/product_367867.html"
+      },
+      "image": "/images/zaopin-z2.jpg",
+      "gallery": [
+        "/images/zaopin-z2.jpg"
+      ],
+      "model3d": null,
+      "model3dNote": "Официальный GLB/GLTF-ассет для этой модели не найден в проверенных материалах.",
+      "sources": [
+        "https://www.zaopinworld.com/product_367867.html"
+      ],
+      "imageSource": "http://cdn.xuansiwei.com/d796iujl7508/1676544922897/d6e79483e53a1a65df5392e3922b9c9.jpg?x-oss-process=style/small"
     }
   ]
 }

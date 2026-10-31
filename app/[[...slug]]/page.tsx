@@ -1,2 +1,2 @@
-import Storefront from '@/components/Storefront';
-export default function Page(){return <Storefront/>}
+// The persistent layout owns the showroom and its route transition state.
+export default function Page(){return null}

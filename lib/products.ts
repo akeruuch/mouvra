@@ -4,9 +4,9 @@ export type Product = typeof products[number];
 export const verifiedAt = research.verifiedAt;
 export const byId = (id: string) => products.find(p => p.id === id);
 export const money = (amount: number | null, currency: string | null = 'USD') => amount === null ? 'Цена не указана' : new Intl.NumberFormat('en-US', { style: 'currency', currency: currency || 'USD' }).format(amount);
-export const number = (value: number) => new Intl.NumberFormat('ru-RU').format(value);
-export const availability = (p: Product) => p.price.availability === 'in_stock' ? 'На сайте производителя' : p.price.availability === 'discontinued' ? 'Архивная модель' : 'Нет в наличии у производителя';
-export const shape = (p: Product) => p.id === 'deathadder-v3-pro' ? 'Эргономичная' : 'Симметричная';
+export const number = (value: number | null) => value === null ? '—' : new Intl.NumberFormat('ru-RU').format(value);
+export const availability = (p: Product) => p.price.availability === 'in_stock' ? 'На сайте производителя' : p.price.availability === 'discontinued' ? 'Архивная модель' : p.price.availability === 'out_of_stock' ? 'Нет в наличии у производителя' : 'Наличие уточняйте у производителя';
+export const shape = (p: Product) => /эргономич/i.test(p.shape) ? 'Эргономичная' : /симметрич/i.test(p.shape) ? 'Симметричная' : 'Не указана';
 export const descriptions: Record<string,string> = {
  'superlight-2':'Знакомая форма. Почти невесомое движение. Универсальная симметричная мышь с сенсором HERO 2 и гибридными переключателями LIGHTFORCE.',
  'viper-v3-pro':'Низкая масса и точная настройка. Симметричный корпус с выраженной опорой и комплектным приёмником HyperPolling 8000 Гц.',
@@ -16,3 +16,5 @@ export const descriptions: Record<string,string> = {
  'atlantis-og-v2-pro':'Выразительная геометрия и открытое основание. Механические Huano и поддержка 4K с дополнительным приёмником.'
 };
 export const apiCatalog=products.map(p=>({id:p.id,name:`${p.brand} ${p.name}`,price:p.price.amount,currency:p.price.currency||'USD'}));
+
+export const measure = (value: number | null, unit: string) => value === null ? 'Не указано' : `${number(value)} ${unit}`;

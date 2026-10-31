@@ -12,11 +12,11 @@ type ApiResult={user:User;state:SavedState;orders:Order[];order:Order;error?:str
 export async function api(path:string,method='GET',data?:unknown){const r=await fetch(`/api/${path}`,{method,headers:{'Content-Type':'application/json'},body:data?JSON.stringify(data):undefined});const result=await r.json() as ApiResult;if(!r.ok)throw new Error(result.error||'Не удалось выполнить запрос. Попробуйте ещё раз.');return result;}
 function useStoreState(){
  const [state,setState]=useState<SavedState>(empty);const [user,setUser]=useState<User|null>(null);const [orders,setOrders]=useState<Order[]>([]);
- const [compare,setCompare]=useState<string[]>([]);const [auth,setAuth]=useState<'login'|'register'|null>(null);const [toast,setToast]=useState('');const [ready,setReady]=useState(false);const [syncError,setSyncError]=useState('');
+ const [compare,setCompare]=useState<string[]>(['superlight-2','viper-v3-pro']);const [auth,setAuth]=useState<'login'|'register'|null>(null);const [toast,setToast]=useState('');const [ready,setReady]=useState(false);const [syncError,setSyncError]=useState('');
  const stateRef=useRef(state);const userRef=useRef(user);const queue=useRef(Promise.resolve());const generation=useRef(0);const toastTimer=useRef<ReturnType<typeof setTimeout>|undefined>(undefined);
  const notify=(message:string)=>{setToast(message);clearTimeout(toastTimer.current);toastTimer.current=setTimeout(()=>setToast(''),3500);};
  useEffect(()=>{let alive=true;const local=readLocal();setState(local);stateRef.current=local;
-  try{setCompare(JSON.parse(localStorage.getItem('mouvra:v1:compare')||'["superlight-2","viper-v3-pro"]').filter((id:string)=>ids.has(id)).slice(0,4));}catch{}
+  try{const saved=JSON.parse(localStorage.getItem('mouvra:v1:compare')||'null');const valid=Array.isArray(saved)?Array.from(new Set(saved.filter((id:unknown):id is string=>typeof id==='string'&&ids.has(id)))).slice(0,4):[];if(valid.length)setCompare(valid);}catch{}
   api('account').then(result=>{if(!alive)return;setUser(result.user);userRef.current=result.user;setState(result.state);stateRef.current=result.state;setOrders(result.orders);}).catch(()=>{if(!alive)return;try{const demo=JSON.parse(sessionStorage.getItem('mouvra:demo')||'null');if(demo?.demo){setUser(demo);userRef.current=demo;setOrders(JSON.parse(localStorage.getItem('mouvra:v1:demo-orders')||'[]'));}}catch{}}).finally(()=>{if(alive)setReady(true)});
   return()=>{alive=false;clearTimeout(toastTimer.current)};
  },[]);
