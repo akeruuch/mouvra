@@ -2,6 +2,7 @@
 import {createContext,useContext,useEffect,useRef,useState,type ReactNode} from 'react';
 import {products,apiCatalog} from '@/lib/products';
 import type {BasketLine,SavedState} from '@/lib/account';
+import {staticPages} from '@/lib/runtime';
 
 export type User={id:string;name:string;email:string;demo?:boolean};
 export type Order={id:string;created:string;items:(BasketLine&{name:string;price:number|null;currency:string})[];totals:Record<string,number>};
@@ -17,7 +18,8 @@ function useStoreState(){
  const notify=(message:string)=>{setToast(message);clearTimeout(toastTimer.current);toastTimer.current=setTimeout(()=>setToast(''),3500);};
  useEffect(()=>{let alive=true;const local=readLocal();setState(local);stateRef.current=local;
   try{const saved=JSON.parse(localStorage.getItem('mouvra:v1:compare')||'null');const valid=Array.isArray(saved)?Array.from(new Set(saved.filter((id:unknown):id is string=>typeof id==='string'&&ids.has(id)))).slice(0,4):[];if(valid.length)setCompare(valid);}catch{}
-  api('account').then(result=>{if(!alive)return;setUser(result.user);userRef.current=result.user;setState(result.state);stateRef.current=result.state;setOrders(result.orders);}).catch(()=>{if(!alive)return;try{const demo=JSON.parse(sessionStorage.getItem('mouvra:demo')||'null');if(demo?.demo){setUser(demo);userRef.current=demo;setOrders(JSON.parse(localStorage.getItem('mouvra:v1:demo-orders')||'[]'));}}catch{}}).finally(()=>{if(alive)setReady(true)});
+  if(staticPages){try{const demo=JSON.parse(sessionStorage.getItem('mouvra:demo')||'null');if(demo?.demo){setUser(demo);userRef.current=demo;setOrders(JSON.parse(localStorage.getItem('mouvra:v1:demo-orders')||'[]'));}}catch{}setReady(true);}
+  else api('account').then(result=>{if(!alive)return;setUser(result.user);userRef.current=result.user;setState(result.state);stateRef.current=result.state;setOrders(result.orders);}).catch(()=>{if(!alive)return;try{const demo=JSON.parse(sessionStorage.getItem('mouvra:demo')||'null');if(demo?.demo){setUser(demo);userRef.current=demo;setOrders(JSON.parse(localStorage.getItem('mouvra:v1:demo-orders')||'[]'));}}catch{}}).finally(()=>{if(alive)setReady(true)});
   return()=>{alive=false;clearTimeout(toastTimer.current)};
  },[]);
  function save(next:SavedState){stateRef.current=next;setState(next);try{localStorage.setItem('mouvra:v1:selection',JSON.stringify(next))}catch{setSyncError('Браузер не разрешил сохранить подборку.');}

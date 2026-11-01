@@ -1,4 +1,4 @@
-# AIMFORM — official product research
+# MOUVRA — источники каталога
 
 Observed 31 October 2026. Research scope: six named models, not every gaming mouse on the market. `mice.json` is the normalized dataset. Values that could not be verified in official material are `null`, never inferred from retailer listings. Prices retain the official currency and market; no conversion or invented local selling price is used.
 
