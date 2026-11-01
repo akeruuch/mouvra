@@ -106,3 +106,13 @@
 .comparison-notes>details{grid-column:1/-1;border-top:1px solid var(--line);padding-top:16px;font-size:13px}
 .mouse-scene model-viewer::part(default-progress-bar){display:none}
 @media(max-width:800px){.comparison-notes{grid-template-columns:1fr}.comparison-table thead th:not(:first-child){min-width:210px}}
+/* Manufacturer studio photos: white is composited into the warm showroom surface.
+   The source pixels remain untouched; do not cast a shadow from the image rectangle. */
+.product-visual,.gallery-stage,.comparison-table th,.piece-image{isolation:isolate}
+.product-image-link img,.detail-mouse,.gallery-thumbs img,.comparison-table thead th>img,
+.source-product img,.cart-image img,.grip-model>img,.scene-poster img{mix-blend-mode:multiply;filter:none}
+.product-image-link img{padding:24px 24px 40px}
+@supports(object-view-box:inset(0)){
+ .product-image-link img[src$="attack-shark-x3-top.jpg"]{object-view-box:inset(7% 15%)}
+ .product-image-link img[src$="kysona-m600-v2.jpg"]{object-view-box:inset(6% 44% 12% 12%);clip-path:inset(0 31% 0 27%)}
+}

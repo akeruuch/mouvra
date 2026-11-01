@@ -131,8 +131,11 @@
         "note": "Цена и доступность конкретного регионального предложения не подтверждены.",
         "url": "https://attackshark.com/products/attack-shark-x3-wireless-gaming-mouse-paw3395"
       },
-      "image": "/images/attack-shark-x3.jpg",
+      "image": "/images/attack-shark-x3-top.jpg",
       "gallery": [
+        "/images/attack-shark-x3-top.jpg",
+        "/images/attack-shark-x3-left.jpg",
+        "/images/attack-shark-x3-right.jpg",
         "/images/attack-shark-x3.jpg"
       ],
       "model3d": null,
@@ -140,7 +143,21 @@
       "sources": [
         "https://attackshark.com/products/attack-shark-x3-wireless-gaming-mouse-paw3395"
       ],
-      "imageSource": "https://cdn.shopify.com/s/files/1/0823/5050/6282/files/attackshark_x3_gaming_mouse_0055.jpg?v=1750248723"
+      "imageSource": "https://attackshark.com/cdn/shop/files/attackshark_x3_gaming_mouse_0005.jpg?v=1750248723&width=1000",
+      "gallerySources": [
+        {
+          "path": "/images/attack-shark-x3-top.jpg",
+          "url": "https://attackshark.com/cdn/shop/files/attackshark_x3_gaming_mouse_0005.jpg?v=1750248723&width=1000"
+        },
+        {
+          "path": "/images/attack-shark-x3-left.jpg",
+          "url": "https://attackshark.com/cdn/shop/files/attackshark_x3_gaming_mouse_0006.jpg?v=1750248723&width=1000"
+        },
+        {
+          "path": "/images/attack-shark-x3-right.jpg",
+          "url": "https://attackshark.com/cdn/shop/files/attackshark_x3_gaming_mouse_0007.jpg?v=1750248723&width=1000"
+        }
+      ]
     },
     {
       "weightG": 49,
@@ -932,8 +949,9 @@
         "note": "Цена и доступность конкретного регионального предложения не подтверждены.",
         "url": "https://shop.kysona.com/products/aztec"
       },
-      "image": "/images/kysona-aztec.jpg",
+      "image": "/images/kysona-aztec-top.png",
       "gallery": [
+        "/images/kysona-aztec-top.png",
         "/images/kysona-aztec.jpg"
       ],
       "model3d": null,
@@ -942,7 +960,7 @@
         "https://shop.kysona.com/products/aztec",
         "https://cdn.shopify.com/s/files/1/0809/0697/7595/files/63166d33d9a3233c91f588a07fc7ffee.jpg?v=1742887724"
       ],
-      "imageSource": "https://cdn.shopify.com/s/files/1/0809/0697/7595/files/M600S_SKU_ed05c10f-298d-427b-b3ed-159ce454b2ad.jpg?v=1742887908"
+      "imageSource": "https://cdn.shopify.com/s/files/1/0809/0697/7595/files/2_121672d8-617b-4f71-a15a-262028f17619.png?v=1742887683"
     },
     {
       "weightG": 55,
