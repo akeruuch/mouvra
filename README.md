@@ -10,6 +10,19 @@ GitHub Pages публикует статическую версию из `main` 
 
 ## Локальная разработка
 
+### PHP + MySQL: полноценный сервер
+
+```sh
+npm run setup:php
+docker compose up -d --build
+docker compose exec web php /var/www/backend/bin/console.php migrate
+docker compose exec web php /var/www/backend/bin/console.php seed
+```
+
+Откройте [локальный сайт](http://127.0.0.1:8080). Нужен запущенный Docker Desktop. Данные сохраняются в именованном томе MySQL. [Инструкция PHP-бэкенда](docs/php-backend.md) · [Лекция 35 и сценарий показа](docs/lecture35.md).
+
+### Исходный режим разработки
+
 Требуется Node.js 22.13 или новее.
 
 ```sh

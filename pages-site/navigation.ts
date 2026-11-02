@@ -1,6 +1,6 @@
 import {useSyncExternalStore} from 'react';
 
-const base='/mouvra';
+const base=(import.meta.env as {VITE_PHP_BACKEND?:string}).VITE_PHP_BACKEND==='1'?'':'/mouvra';
 const listeners=new Set<()=>void>();
 const notify=()=>listeners.forEach(listener=>listener());
 if(typeof window!=='undefined')window.addEventListener('popstate',notify);

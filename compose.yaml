@@ -1,0 +1,46 @@
+name: mouvra-php
+services:
+  web:
+    build: .
+    ports:
+      - "127.0.0.1:${WEB_PORT:-8080}:80"
+    environment:
+      APP_ORIGIN: ${APP_ORIGIN:-http://127.0.0.1:8080}
+      DB_HOST: database
+      DB_NAME: mouvra
+      DB_USER: mouvra
+      DB_PASSWORD: ${DB_PASSWORD:?Run npm run setup:php first}
+    depends_on:
+      database:
+        condition: service_healthy
+    networks: [backend]
+    healthcheck:
+      test: ["CMD", "php", "-r", "exit(@file_get_contents('http://127.0.0.1/api/health') === false ? 1 : 0);"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    mem_limit: 512m
+    cpus: 2
+    restart: unless-stopped
+  database:
+    image: mysql:8.4
+    environment:
+      MYSQL_DATABASE: mouvra
+      MYSQL_USER: mouvra
+      MYSQL_PASSWORD: ${DB_PASSWORD:?Run npm run setup:php first}
+      MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD:?Run npm run setup:php first}
+    volumes:
+      - mysql_data:/var/lib/mysql
+    networks: [backend]
+    healthcheck:
+      test: ["CMD-SHELL", "MYSQL_PWD=\"$$MYSQL_PASSWORD\" mysql -h 127.0.0.1 -u\"$$MYSQL_USER\" \"$$MYSQL_DATABASE\" -e 'SELECT 1' >/dev/null 2>&1"]
+      interval: 5s
+      timeout: 5s
+      retries: 30
+      start_period: 30s
+    mem_limit: 1g
+    restart: unless-stopped
+networks:
+  backend:
+volumes:
+  mysql_data:

@@ -2,7 +2,7 @@
 import {createContext,useContext,useEffect,useRef,useState,type ReactNode} from 'react';
 import {products,apiCatalog} from '@/lib/products';
 import type {BasketLine,SavedState} from '@/lib/account';
-import {staticPages} from '@/lib/runtime';
+import {staticPages,phpBackend} from '@/lib/runtime';
 
 export type User={id:string;name:string;email:string;demo?:boolean};
 export type Order={id:string;created:string;items:(BasketLine&{name:string;price:number|null;currency:string})[];totals:Record<string,number>};
@@ -10,11 +10,12 @@ const empty:SavedState={cart:[],favorites:[]};
 const ids=new Set(products.map(p=>p.id));
 function readLocal():SavedState {try{const v=JSON.parse(localStorage.getItem('mouvra:v1:selection')||'null');return {cart:Array.isArray(v?.cart)?v.cart.filter((x:BasketLine)=>ids.has(x.id)&&Number.isInteger(x.quantity)&&x.quantity>0&&x.quantity<=10):[],favorites:Array.isArray(v?.favorites)?v.favorites.filter((id:string)=>ids.has(id)):[]};}catch{return empty;}}
 type ApiResult={user:User;state:SavedState;orders:Order[];order:Order;error?:string};
-export async function api(path:string,method='GET',data?:unknown){const r=await fetch(`/api/${path}`,{method,headers:{'Content-Type':'application/json'},body:data?JSON.stringify(data):undefined});const result=await r.json() as ApiResult;if(!r.ok)throw new Error(result.error||'Не удалось выполнить запрос. Попробуйте ещё раз.');return result;}
+export async function api(path:string,method='GET',data?:unknown,headers:Record<string,string>={}){const r=await fetch(`/api/${path}`,{method,headers:{'Content-Type':'application/json',...headers},body:data?JSON.stringify(data):undefined,signal:AbortSignal.timeout(15000)});let result:ApiResult;try{result=await r.json() as ApiResult;}catch{throw new Error('Сервер вернул некорректный ответ. Попробуйте ещё раз.');}if(!r.ok)throw new Error(result.error||'Не удалось выполнить запрос. Попробуйте ещё раз.');return result;}
 function useStoreState(){
  const [state,setState]=useState<SavedState>(empty);const [user,setUser]=useState<User|null>(null);const [orders,setOrders]=useState<Order[]>([]);
  const [compare,setCompare]=useState<string[]>(['superlight-2','viper-v3-pro']);const [auth,setAuth]=useState<'login'|'register'|null>(null);const [toast,setToast]=useState('');const [ready,setReady]=useState(false);const [syncError,setSyncError]=useState('');
  const stateRef=useRef(state);const userRef=useRef(user);const queue=useRef(Promise.resolve());const generation=useRef(0);const toastTimer=useRef<ReturnType<typeof setTimeout>|undefined>(undefined);
+ const orderAttempt=useRef<{signature:string;key:string}|null>(null);
  const notify=(message:string)=>{setToast(message);clearTimeout(toastTimer.current);toastTimer.current=setTimeout(()=>setToast(''),3500);};
  useEffect(()=>{let alive=true;const local=readLocal();setState(local);stateRef.current=local;
   try{const saved=JSON.parse(localStorage.getItem('mouvra:v1:compare')||'null');const valid=Array.isArray(saved)?Array.from(new Set(saved.filter((id:unknown):id is string=>typeof id==='string'&&ids.has(id)))).slice(0,4):[];if(valid.length)setCompare(valid);}catch{}
@@ -38,9 +39,37 @@ function useStoreState(){
  function demo(){const demoUser:User={id:'demo',name:'Алекс',email:'Демонстрационный аккаунт',demo:true};userRef.current=demoUser;setUser(demoUser);setAuth(null);sessionStorage.setItem('mouvra:demo',JSON.stringify(demoUser));try{setOrders(JSON.parse(localStorage.getItem('mouvra:v1:demo-orders')||'[]'))}catch{}notify('Открыт демонстрационный кабинет');}
  async function logout(){await queue.current;if(userRef.current&&!userRef.current.demo)await api('logout','POST',{});generation.current++;userRef.current=null;setUser(null);setOrders([]);sessionStorage.removeItem('mouvra:demo');save(empty);notify('Вы вышли из аккаунта');}
  async function profile(name:string){if(user?.demo){const next={...user,name};setUser(next);userRef.current=next;sessionStorage.setItem('mouvra:demo',JSON.stringify(next));}else{const r=await api('profile','PATCH',{name});setUser(r.user);userRef.current=r.user;}notify('Имя обновлено');}
- async function order(){if(!user){setAuth('login');return;}if(!stateRef.current.cart.length)return;
-  let created:Order;if(user.demo){const items=stateRef.current.cart.map(x=>({...x,...apiCatalog.find(p=>p.id===x.id)!}));const totals:Record<string,number>={};for(const item of items)if(item.price!==null)totals[item.currency]=Math.round(((totals[item.currency]||0)+item.price*item.quantity)*100)/100;created={id:crypto.randomUUID(),created:new Date().toISOString(),items,totals};const next=[created,...orders];setOrders(next);localStorage.setItem('mouvra:v1:demo-orders',JSON.stringify(next));}else{await queue.current;await api('state','PUT',stateRef.current);const r=await api('orders','POST',{});created=r.order;setOrders(old=>[created,...old]);}notify('Подборка сохранена в кабинете. Оплата не списывалась.');return created;
+ async function order(){
+  const active=userRef.current;
+  if(!active){setAuth('login');return;}
+  const snapshot=structuredClone(stateRef.current);
+  if(!snapshot.cart.length)return;
+  let created:Order;
+  if(active.demo){
+   const items=snapshot.cart.map(x=>({...x,...apiCatalog.find(p=>p.id===x.id)!}));
+   const totals:Record<string,number>={};
+   for(const item of items)if(item.price!==null)totals[item.currency]=Math.round(((totals[item.currency]||0)+item.price*item.quantity)*100)/100;
+   created={id:crypto.randomUUID(),created:new Date().toISOString(),items,totals};
+   const next=[created,...orders];setOrders(next);localStorage.setItem('mouvra:v1:demo-orders',JSON.stringify(next));
+  }else{
+   const signature=JSON.stringify([active.id,snapshot.cart]);
+   if(orderAttempt.current?.signature!==signature)orderAttempt.current={signature,key:crypto.randomUUID()};
+   const attempt=orderAttempt.current;
+   const gen=generation.current;
+   // Enqueue the complete operation before yielding: later cart edits must follow it.
+   const pending=queue.current.catch(()=>{}).then(async()=>{
+    if(gen!==generation.current)throw new Error('Аккаунт изменился. Повторите сохранение.');
+    await api('state','PUT',snapshot);
+    return api('orders','POST',{},phpBackend?{'Idempotency-Key':attempt.key}:{});
+   });
+   queue.current=pending.then(()=>{},()=>{});
+   const result=await pending;created=result.order;
+   if(orderAttempt.current===attempt)orderAttempt.current=null;
+   if(gen===generation.current)setOrders(old=>[created,...old.filter(o=>o.id!==created.id)]);
+  }
+  notify('Подборка сохранена в кабинете. Оплата не списывалась.');return created;
  }
+
  return {state,user,orders,compare,auth,setAuth,toast,ready,syncError,add,quantity,favorite,toggleCompare,authenticate,demo,logout,profile,order,notify,retry:()=>save(stateRef.current)};
 }
 const Context=createContext<ReturnType<typeof useStoreState>|null>(null);

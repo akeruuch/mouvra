@@ -1,7 +1,7 @@
 import research from '../research/mice.json';
-export const products = research.products;
+export let products = research.products;
 export type Product = typeof products[number];
-export const verifiedAt = research.verifiedAt;
+export let verifiedAt = research.verifiedAt;
 export const byId = (id: string) => products.find(p => p.id === id);
 export const money = (amount: number | null, currency: string | null = 'USD') => amount === null ? 'Цена не указана' : new Intl.NumberFormat('en-US', { style: 'currency', currency: currency || 'USD' }).format(amount);
 export const number = (value: number | null) => value === null ? '—' : new Intl.NumberFormat('ru-RU').format(value);
@@ -15,6 +15,10 @@ export const descriptions: Record<string,string> = {
  'pulsar-x2v2':'Компактная форма с низкой спинкой. Широкая середина для уверенного когтевого и пальцевого хвата, оптические переключатели и сенсор PAW3395.',
  'atlantis-og-v2-pro':'Выразительная геометрия и открытое основание. Механические Huano и поддержка 4K с дополнительным приёмником.'
 };
-export const apiCatalog=products.map(p=>({id:p.id,name:`${p.brand} ${p.name}`,price:p.price.amount,currency:p.price.currency||'USD'}));
+export let apiCatalog=products.map(p=>({id:p.id,name:`${p.brand} ${p.name}`,price:p.price.amount,currency:p.price.currency||'USD'}));
+export function replaceCatalog(catalog:{products:Product[];verifiedAt:string}) {
+ products=catalog.products;verifiedAt=catalog.verifiedAt;
+ apiCatalog=products.map(p=>({id:p.id,name:`${p.brand} ${p.name}`,price:p.price.amount,currency:p.price.currency||'USD'}));
+}
 
 export const measure = (value: number | null, unit: string) => value === null ? 'Не указано' : `${number(value)} ${unit}`;

@@ -6,6 +6,9 @@
     "node": ">=22.13.0"
   },
   "scripts": {
+    "setup:php": "node scripts/setup-php.mjs",
+    "build:php": "vite build --config vite.php.config.ts",
+    "test:php": "node --test backend/tests/*.test.mjs",
     "dev": "node scripts/run-framework.mjs dev",
     "build": "node scripts/run-framework.mjs build",
     "build:pages": "node scripts/build-pages.mjs",
