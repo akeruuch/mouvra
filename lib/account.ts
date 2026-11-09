@@ -1,6 +1,7 @@
 export type Query = { bind(...args: unknown[]): Query; first<T>(): Promise<T | null>; run(): Promise<unknown>; all<T>(): Promise<{ results: T[] }> };
 export type Database = { prepare(sql: string): Query };
 export type CatalogueItem = { id: string; price: number | null; currency: string; name: string };
+export type Review = { id: string; userId: string; userName: string; productId: string; rating: number; comment: string; created: string; updated: string };
 export type BasketLine = { id: string; quantity: number };
 export type SavedState = { cart: BasketLine[]; favorites: string[] };
 type User = { id: string; name: string; email: string; password_hash: string; salt: string; state: string };
@@ -21,7 +22,7 @@ function validState(value:unknown,catalog:CatalogueItem[]): value is SavedState 
 export async function accountApi(request: Request, db: Database, catalog: CatalogueItem[]): Promise<Response> {
  const json=(data:unknown,status=200,headers:Record<string,string>={})=>Response.json(data,{status,headers:{'Cache-Control':'no-store','X-Content-Type-Options':'nosniff',...headers}});
  const fail=(error:string,status=400)=>json({error},status);
- const url=new URL(request.url);const route=url.pathname.replace('/api/','');
+  const url=new URL(request.url);const route=url.pathname.replace('/api/','');const reviewMatch=route.match(/^reviews\/([^/]+)$/);
  const secure=url.protocol==='https:'?'; Secure':'';
  const sessionCookie=(token:string,maxAge=604800)=>`mouvra_session=${token}; HttpOnly; Path=/; SameSite=Lax; Max-Age=${maxAge}${secure}`;
  if(request.method!=='GET'&&request.headers.get('origin')!==url.origin)return fail('Запрос отклонён. Обновите страницу.',403);
@@ -31,6 +32,12 @@ export async function accountApi(request: Request, db: Database, catalog: Catalo
    const raw=await request.text(); if(raw.length>16000)return fail('Слишком большой запрос.',413);
    try {body=raw?JSON.parse(raw):{};}catch{return fail('Некорректные данные.');}
    if(!body||typeof body!=='object'||Array.isArray(body))return fail('Некорректные данные.');
+  }
+  if(route==='reviews'&&request.method==='GET'){
+   const productId=url.searchParams.get('productId')||'';if(!catalog.some(p=>p.id===productId))return fail('Модель не найдена.',404);
+   const {results}=await db.prepare('SELECT reviews.id,reviews.user_id AS userId,users.name AS userName,reviews.product_id AS productId,reviews.rating,reviews.comment,reviews.created,reviews.updated FROM reviews JOIN users ON users.id=reviews.user_id WHERE reviews.product_id=? ORDER BY reviews.created DESC').bind(productId).all<Review>();
+   const average=results.length?Math.round(results.reduce((sum,r)=>sum+r.rating,0)/results.length*10)/10:0;
+   return json({reviews:results,average,count:results.length});
   }
   if((route==='register'||route==='login')&&request.method==='POST'){
    const email=typeof body.email==='string'?body.email.trim().toLowerCase():'';
@@ -59,6 +66,17 @@ export async function accountApi(request: Request, db: Database, catalog: Catalo
   const tokenHash=token?await digest(token):'';
   const user=token?await db.prepare('SELECT users.* FROM users JOIN sessions ON sessions.user_id=users.id WHERE sessions.token=? AND sessions.expires>?').bind(tokenHash,Date.now()).first<User>():null;
   if(!user)return fail('Войдите в аккаунт, чтобы продолжить.',401);
+  if(route==='reviews'&&request.method==='POST'){
+   const productId=typeof body.productId==='string'?body.productId:'';const rating=typeof body.rating==='number'?body.rating:0;const comment=typeof body.comment==='string'?body.comment.trim():'';
+   if(!catalog.some(p=>p.id===productId))return fail('Модель не найдена.',404);if(!Number.isInteger(rating)||rating<1||rating>5)return fail('Оценка должна быть от 1 до 5.',400);if(comment.length<2||comment.length>2000)return fail('Комментарий должен содержать от 2 до 2000 символов.',400);
+   const id=crypto.randomUUID(),now=new Date().toISOString();try{await db.prepare('INSERT INTO reviews(id,user_id,product_id,rating,comment,created,updated) VALUES(?,?,?,?,?,?,?)').bind(id,user.id,productId,rating,comment,now,now).run();}catch(error){if(String(error).toLowerCase().includes('unique'))return fail('Вы уже оставили отзыв об этой модели.',409);throw error;}
+   return json({review:{id,userId:user.id,userName:user.name,productId,rating,comment,created:now,updated:now}},201);
+  }
+  if(reviewMatch&&(request.method==='PATCH'||request.method==='DELETE')){
+   const review=await db.prepare('SELECT * FROM reviews WHERE id=? AND user_id=?').bind(reviewMatch[1],user.id).first<{id:string;user_id:string;product_id:string;rating:number;comment:string;created:string;updated:string}>();if(!review)return fail('Отзыв не найден.',404);
+   if(request.method==='DELETE'){await db.prepare('DELETE FROM reviews WHERE id=? AND user_id=?').bind(review.id,user.id).run();return json({ok:true});}
+   const rating=typeof body.rating==='number'?body.rating:review.rating;const comment=typeof body.comment==='string'?body.comment.trim():review.comment;if(!Number.isInteger(rating)||rating<1||rating>5)return fail('Оценка должна быть от 1 до 5.',400);if(comment.length<2||comment.length>2000)return fail('Комментарий должен содержать от 2 до 2000 символов.',400);const updated=new Date().toISOString();await db.prepare('UPDATE reviews SET rating=?,comment=?,updated=? WHERE id=? AND user_id=?').bind(rating,comment,updated,review.id,user.id).run();return json({review:{id:review.id,userId:user.id,userName:user.name,productId:review.product_id,rating,comment,created:review.created,updated}});
+  }
   if(route==='logout'&&request.method==='POST'){
    await db.prepare('DELETE FROM sessions WHERE token=?').bind(tokenHash).run();return json({ok:true},200,{'Set-Cookie':sessionCookie('',0)});
   }

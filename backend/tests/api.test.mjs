@@ -16,6 +16,29 @@ function client() {
 }
 const register = (call) => call('register', 'POST', {name:'Тестовый игрок',email:`${randomUUID()}@example.test`,password});
 
+test('reviews can be created, edited and deleted only by their author', async () => {
+  const one=client(),two=client(),guest=client();
+  await register(one);await register(two);
+  const productId='superlight-2', payload={productId,rating:5,comment:'Comfortable shape'};
+  assert.equal((await guest('reviews','POST',payload)).status,401);
+  const created=await one('reviews','POST',payload);
+  assert.equal(created.status,201);
+  const id=created.body.review.id;
+  assert.match(id,/^[a-f0-9]{32}$/);
+  assert.equal((await one('reviews','POST',payload)).status,409);
+  const list=await guest(`reviews?productId=${productId}`);
+  assert.equal(list.status,200);
+  assert.ok(list.body.reviews.some(r=>r.id===id));
+  assert.equal((await two(`reviews/${id}`,'PATCH',{rating:1,comment:'Hijack'})).status,404);
+  assert.equal((await two(`reviews/${id}`,'DELETE',{})).status,404);
+  assert.equal((await one(`reviews/${id}`,'PATCH',{rating:6})).status,400);
+  const updated=await one(`reviews/${id}`,'PATCH',{rating:4,comment:'Updated review'});
+  assert.equal(updated.status,200);
+  assert.equal(updated.body.review.rating,4);
+  assert.equal((await one(`reviews/${id}`,'DELETE',{})).status,200);
+  assert.ok(!(await guest(`reviews?productId=${productId}`)).body.reviews.some(r=>r.id===id));
+});
+
 test('PHP health and MySQL catalogue are available', async () => {
   const call=client();
   let health;

@@ -1,0 +1,1 @@
+CREATE UNIQUE INDEX `reviews_user_product_unique` ON `reviews` (`user_id`,`product_id`);

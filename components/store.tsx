@@ -6,10 +6,12 @@ import {staticPages,phpBackend} from '@/lib/runtime';
 
 export type User={id:string;name:string;email:string;demo?:boolean};
 export type Order={id:string;created:string;items:(BasketLine&{name:string;price:number|null;currency:string})[];totals:Record<string,number>};
+export type Review={id:string;userId:string;userName:string;productId:string;rating:number;comment:string;created:string;updated:string};
+export type ReviewList={reviews:Review[];average:number;count:number};
 const empty:SavedState={cart:[],favorites:[]};
 const ids=new Set(products.map(p=>p.id));
 function readLocal():SavedState {try{const v=JSON.parse(localStorage.getItem('mouvra:v1:selection')||'null');return {cart:Array.isArray(v?.cart)?v.cart.filter((x:BasketLine)=>ids.has(x.id)&&Number.isInteger(x.quantity)&&x.quantity>0&&x.quantity<=10):[],favorites:Array.isArray(v?.favorites)?v.favorites.filter((id:string)=>ids.has(id)):[]};}catch{return empty;}}
-type ApiResult={user:User;state:SavedState;orders:Order[];order:Order;error?:string};
+type ApiResult={user:User;state:SavedState;orders:Order[];order:Order;review:Review;reviews:Review[];average:number;count:number;ok:boolean;error?:string};
 export async function api(path:string,method='GET',data?:unknown,headers:Record<string,string>={}){const r=await fetch(`/api/${path}`,{method,headers:{'Content-Type':'application/json',...headers},body:data?JSON.stringify(data):undefined,signal:AbortSignal.timeout(15000)});let result:ApiResult;try{result=await r.json() as ApiResult;}catch{throw new Error('Сервер вернул некорректный ответ. Попробуйте ещё раз.');}if(!r.ok)throw new Error(result.error||'Не удалось выполнить запрос. Попробуйте ещё раз.');return result;}
 function useStoreState(){
  const [state,setState]=useState<SavedState>(empty);const [user,setUser]=useState<User|null>(null);const [orders,setOrders]=useState<Order[]>([]);
@@ -39,6 +41,9 @@ function useStoreState(){
  function demo(){const demoUser:User={id:'demo',name:'Алекс',email:'Демонстрационный аккаунт',demo:true};userRef.current=demoUser;setUser(demoUser);setAuth(null);sessionStorage.setItem('mouvra:demo',JSON.stringify(demoUser));try{setOrders(JSON.parse(localStorage.getItem('mouvra:v1:demo-orders')||'[]'))}catch{}notify('Открыт демонстрационный кабинет');}
  async function logout(){await queue.current;if(userRef.current&&!userRef.current.demo)await api('logout','POST',{});generation.current++;userRef.current=null;setUser(null);setOrders([]);sessionStorage.removeItem('mouvra:demo');save(empty);notify('Вы вышли из аккаунта');}
  async function profile(name:string){if(user?.demo){const next={...user,name};setUser(next);userRef.current=next;sessionStorage.setItem('mouvra:demo',JSON.stringify(next));}else{const r=await api('profile','PATCH',{name});setUser(r.user);userRef.current=r.user;}notify('Имя обновлено');}
+ async function createReview(productId:string,rating:number,comment:string){if(!userRef.current||userRef.current.demo){setAuth('login');throw new Error('Войдите в аккаунт, чтобы оставить отзыв.');}return api('reviews','POST',{productId,rating,comment}) as Promise<{review:Review}>;}
+ async function updateReview(id:string,rating:number,comment:string){if(!userRef.current||userRef.current.demo){setAuth('login');throw new Error('Войдите в аккаунт, чтобы изменить отзыв.');}return api('reviews/'+encodeURIComponent(id),'PATCH',{rating,comment}) as Promise<{review:Review}>;}
+ async function deleteReview(id:string){if(!userRef.current||userRef.current.demo){setAuth('login');throw new Error('Войдите в аккаунт, чтобы удалить отзыв.');}return api('reviews/'+encodeURIComponent(id),'DELETE',{}) as Promise<{ok:boolean}>;}
  async function order(){
   const active=userRef.current;
   if(!active){setAuth('login');return;}
@@ -70,7 +75,7 @@ function useStoreState(){
   notify('Подборка сохранена в кабинете. Оплата не списывалась.');return created;
  }
 
- return {state,user,orders,compare,auth,setAuth,toast,ready,syncError,add,quantity,favorite,toggleCompare,authenticate,demo,logout,profile,order,notify,retry:()=>save(stateRef.current)};
+ return {state,user,orders,compare,auth,setAuth,toast,ready,syncError,add,quantity,favorite,toggleCompare,authenticate,demo,logout,profile,order,createReview,updateReview,deleteReview,notify,retry:()=>save(stateRef.current)};
 }
 const Context=createContext<ReturnType<typeof useStoreState>|null>(null);
 export function StoreProvider({children}:{children:ReactNode}){const value=useStoreState();return <Context.Provider value={value}>{children}</Context.Provider>}
