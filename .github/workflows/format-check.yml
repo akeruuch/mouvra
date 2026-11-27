@@ -1,0 +1,45 @@
+name: Code Format Check
+
+on:
+    push:
+        branches: [main, codex/mouvra-continuation]
+    pull_request:
+        branches: [main]
+    workflow_dispatch:
+
+permissions:
+    contents: read
+
+jobs:
+    check:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Get project files
+              uses: actions/checkout@v4
+
+            - name: Set up Node.js
+              uses: actions/setup-node@v4
+              with:
+                  node-version: '22'
+                  cache: npm
+
+            - name: Install dependencies
+              run: npm ci
+
+            - name: Check formatting
+              run: npm run format:check
+
+            - name: Check CSS
+              run: npm run lint:css
+
+            - name: Check JavaScript and TypeScript
+              run: npm run lint
+
+            - name: Check types
+              run: npm run typecheck
+
+            - name: Run tests
+              run: npm test
+
+            - name: Build GitHub Pages version
+              run: npm run build:pages

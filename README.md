@@ -23,7 +23,7 @@ docker compose exec web php /var/www/backend/bin/console.php seed
 
 ### Исходный режим разработки
 
-Требуется Node.js 22.13 или новее.
+Требуется Node.js 22.22.2+ в ветке 22 или 24.15.0+ в ветке 24.
 
 ```sh
 npm ci
@@ -38,6 +38,27 @@ npm run build:pages
 
 Готовые файлы появятся в `dist/pages/`. Полную серверную сборку можно проверить командой `npm run build`.
 
-## Данные
+## Форматирование и проверка кода
+
+В VS Code установлены Prettier, ESLint и Stylelint. Настройки проекта включают
+форматирование при сохранении. В доверенной папке расширение Prettier использует
+локальную версию из npm и правила `.prettierrc.json`.
+
+```sh
+npm run format:check
+npm run format
+npm run check
+```
+
+`format:check` проверяет оформление, `format` исправляет его, `check` также
+запускает Stylelint, ESLint, TypeScript и тесты. GitHub Actions выполняет эти
+проверки и сборку Pages при push в `main` и `codex/mouvra-continuation`.
+[Выполнение лекции 54](docs/lecture54.md) · [Как читать код](docs/CODE_GUIDE.md).
+
+В PowerShell при уже установленных зависимостях можно запустить `.\check-code.cmd`
+для проверки или `.\format-code.cmd` для форматирования, даже если команда npm
+не добавлена в PATH.
+
+## Данные каталога
 
 Каталог находится в `research/mice.json`. Ссылки на официальные страницы и источники изображений приведены в карточках и разделе «Источники данных». Изображения, 3D-файлы и товарные знаки принадлежат их правообладателям.
